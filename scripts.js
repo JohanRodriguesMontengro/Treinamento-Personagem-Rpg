@@ -35,7 +35,7 @@ do {
   Elemento: ${Elemento}
   Nível: ${NivelPersonagem}
   Resets: ${Reset}`)
-  PainelDeControle = parseInt(PainelDeControle)
+    PainelDeControle = parseInt(PainelDeControle)
 
     if (isNaN(PainelDeControle) || PainelDeControle <= 0 || PainelDeControle >= 6) {
       alert(`Digite somente números entre 1 a 5`)
@@ -65,78 +65,157 @@ do {
         if (isNaN(PainelDeTreinamento) || PainelDeTreinamento >= 16 || PainelDeTreinamento <= 0) {
           alert(`Digite somente números entre 1 a 15`)
         }
-        else if (PainelDeTreinamento === 1) {
+        if (PainelDeTreinamento === 1 && NivelPersonagem >= 0) {
           alert(`Você ficou treinando na Academia durante 5 horas
           Você evoluiu 2 nível`)
           NivelPersonagem += 2
         }
-        else if (PainelDeTreinamento === 2) {
+        if (PainelDeTreinamento === 2 && NivelPersonagem >= 15) {
           alert(`Você ficou treinando na Cachoeira Do Sul durante 6 horas
           Você evolui 16 níveis`)
           NivelPersonagem += 16
         }
-        else if (PainelDeTreinamento === 3) {
+        if (PainelDeTreinamento === 3 && NivelPersonagem >= 163) {
           alert(`Você ficou treinando em Neuschwanstein durante 3 horas
           Você evolui 51 níveis`)
           NivelPersonagem += 51
         }
-        else if (PainelDeTreinamento === 4) {
+        if (PainelDeTreinamento === 4 && NivelPersonagem >= 534) {
           alert(`Você ficou treinando em Fukushima durante 6 horas
           Você evolui 93 níveis`)
           NivelPersonagem += 93
         }
-        else if (PainelDeTreinamento === 5) {
+        if (PainelDeTreinamento === 5 && NivelPersonagem >= 4592) {
           alert(`Você ficou treinando na Fossa Das Marianas durante 6 horas
           Você evolui 126 níveis`)
           NivelPersonagem += 126
         }
-        else if (PainelDeTreinamento === 6) {
+        if (PainelDeTreinamento === 6 && NivelPersonagem >= 8849) {
           alert(`Você ficou treinando no Monte Everest durante 2 horas
           Você evolui 379 níveis`)
           NivelPersonagem += 379
         }
-        else if (PainelDeTreinamento === 7) {
+        if (PainelDeTreinamento === 7 && NivelPersonagem >= 15867) {
           alert(`Você ficou treinando em Krakatoa durante 1 horas
           Você evolui 731 níveis`)
           NivelPersonagem += 731
         }
-        else if (PainelDeTreinamento === 8) {
+        if (PainelDeTreinamento === 8 && NivelPersonagem >= 35795) {
           alert(`Você ficou treinando na Orbita Da Terra durante 30 Minutos
           Você evolui 1.893 níveis`)
           NivelPersonagem += 1893
         }
-        else if (PainelDeTreinamento === 9) {
+        if (PainelDeTreinamento === 9 && NivelPersonagem >= 78583) {
           alert(`Você ficou treinando na Estação Espacial Internacional durante 5 horas
           Você evolui 3.126 níveis`)
           NivelPersonagem += 3126
         }
-        else if (PainelDeTreinamento === 10) {
+        if (PainelDeTreinamento === 10 && NivelPersonagem >= 278945) {
           alert(`Você ficou treinando no Vácuo Do Espaço durante 2 horas
           Você evolui 8.542 níveis`)
           NivelPersonagem += 8542
         }
-        else if (PainelDeTreinamento === 11) {
+        if (PainelDeTreinamento === 11 && NivelPersonagem >= 608842) {
           alert(`Você ficou treinando na Lua Terrestre durante 6 horas
           Você evolui 18.479 níveis`)
           NivelPersonagem += 18479
         }
-        else if (PainelDeTreinamento === 12) {
+        if (PainelDeTreinamento === 12 && NivelPersonagem >= 1598378) {
           alert(`Você ficou treinando no Sol durante 1 horas
           Você evolui 81.371 níveis`)
           NivelPersonagem += 81371
         }
-        else if (PainelDeTreinamento === 13) {
+        if (PainelDeTreinamento === 13 && NivelPersonagem >= 14759645) {
           alert(`Você ficou treinando Fora Do Sistema Solar durante 30 Minutos
-          Você evolui 321.673 níveis`)
-          NivelPersonagem += 321673
+          Você evolui 421.673 níveis`)
+          NivelPersonagem += 421673
         }
-        else if (PainelDeTreinamento === 14) {
+        if (PainelDeTreinamento === 14 && NivelPersonagem >= 329574297) {
           alert(`Você ficou treinando Fora Da Via Láctea durante 6 horas
-          Você evolui 1.845.176 níveis`)
-          NivelPersonagem += 1845176
+          Você evolui 51.845.176 níveis`)
+          NivelPersonagem += 51845176
         }
-      }while(Repetidor === true)
-      
+        if (PainelDeTreinamento === 15) {
+          let PainelDeTreinamentoSobre = ``
+          let RepetidorSobre = true
+
+          do {
+            PainelDeTreinamentoSobre = prompt(`Saiba mais sobre cada área de treinamento!
+            1- Academia
+              2- Cachoeira Do Sul
+              3- Neuschwanstein
+              4- Fukushima
+              5- Fossa Das Marianas
+              6- Monte Everest
+              7- Krakatoa
+              8- Orbita Da Terra
+              9- Estação Espacial Internacional
+              10- Vácuo Do Espaço
+              11- Lua Terrestre
+              12- Sol
+              13- Fora Do Sistema Solar
+              14- Fora Da Via Láctea
+              15- Sobre os locais`)
+            PainelDeTreinamentoSobre = parseInt(PainelDeTreinamentoSobre)
+            if (PainelDeTreinamentoSobre === 1) {
+              alert(`O termo academia se refere aos espaços principalmente criados para realizar diversos tipos de atividade física. Hoje em dia, a palavra academia é utilizada para clubes ou centros esportivos onde é necessário pagar uma importância para poder ter acesso a vários lugares de exercícios.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 2) {
+              alert(`Cachoeira do Sul é um município brasileiro do estado do Rio Grande do Sul, emancipado de Rio Pardo e instalado em 1820. A origem de seu nome se deve a uma antiga cachoeira existente no Rio Jacuí, porém em seu lugar foi construída a Ponte do Fandango.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 3) {
+              alert(`O Castelo de Neuschwanstein é um palácio alemão construído na segunda metade do século XIX, perto das cidades de Hohenschwangau e Füssen, no sudoeste da Baviera, a escassas dezenas de quilômetros da fronteira com a Áustria.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 4) {
+              alert(`Acidente nuclear de Fukushima Daiichi foi um desastre nuclear ocorrido na Central Nuclear de Fukushima I em 11 de março de 2011, causado pelo derretimento de três dos seis reatores nucleares da usina. A falha ocorreu quando a usina foi atingida por um tsunami provocado por um maremoto de magnitude 8,7.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 5) {
+              alert(`A Fossa das Marianas é o local mais profundo dos oceanos, atingindo uma profundidade de 10 984 metros. Localiza-se no oceano Pacífico, a leste das ilhas Marianas, na fronteira convergente entre as placas tectônicas do Oceano Pacífico e das Filipinas.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 6) {
+              alert(`O monte Everest ou, na sua forma portuguesa, Evereste, também conhecido no Nepal como Sagarmāthā, no Tibete como Chomolungma e Zhūmùlǎngmǎ Fēng em chinês, é a montanha de maior altitude da Terra. Seu pico está a 8 848,86 metros acima do nível do mar, na subcordilheira Mahalangur Himal dos Himalaias.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 7) {
+            alert(`Krakatoa ou Cracatoa é uma ilha vulcânica situada no estreito de Sunda entre as ilhas de Java e Sumatra, na província indonésia de Lampung.`)
+            RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 8) {
+              alert(`A translação da Terra é o movimento que a Terra realiza ao redor do Sol a uma distância aproximada de 1 unidade astronômica, ou 149 597 870 700 metros. Uma translação completa ao redor do Sol leva 1 ano sideral ou 365,256363 dias solares a uma velocidade orbital média de 29,78 km/s.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 9) {
+              alert(`Estação Espacial Internacional é um laboratório espacial completamente concluído, cuja montagem em órbita começou em 1998 e terminou oficialmente em 8 de julho de 2011 na missão STS-135, com o ônibus espacial Atlantis`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 10) {
+              alert(`Vácuo é geralmente definido como espaço vazio, ou espaço absolutamente desprovido de matéria. No meio industrial vácuo é considerado um espaço parcialmente esvaziado (até o mais alto grau possível), através de meios artificiais, como por uma bomba de ar.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 11) {
+              alert(`Lua é o único satélite natural da Terra e o quinto maior do Sistema Solar. Ela se formou, há aproximadamente 4,5 bilhões de anos, do impacto de um grande corpo celeste com o planeta, e desde então realiza a sua órbita ao redor dele e também do Sol.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 12) {
+              alert(`O Sol é a estrela central do Sistema Solar. Todos os outros corpos do Sistema Solar, como planetas, planetas anões, asteroides, cometas e poeira, bem como todos os satélites associados a estes corpos, giram ao seu redor.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 13) {
+              alert(`Um exoplaneta ou planeta extrassolar é um planeta fora do Sistema Solar. A primeira evidência possível de um exoplaneta foi observada em 1917, mas não foi reconhecida como tal. A primeira confirmação da detecção ocorreu em 1992. Um planeta diferente, detectado inicialmente em 1988, foi confirmado em 2003.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+            else if (PainelDeTreinamentoSobre === 14) {
+              alert(`As galáxias são conjuntos de estrelas, poeira, gases e matéria escura que formam o Universo. Elas podem ser elípticas, espirais, como a Via Láctea, ou possuir forma irregular. Galáxia do Triângulo ou Messier 33. As galáxias são sistemas formados por milhares a trilhões de estrelas, poeira, gases e matéria escura.`)
+              RepetidorSobre = confirm(`Deseja saber mais sobre as áreas de treinamentos`)
+            }
+          }while(RepetidorSobre === true)
+        }
+      } while (Repetidor === true)
     }
   }
 }while(Continuar === true)
