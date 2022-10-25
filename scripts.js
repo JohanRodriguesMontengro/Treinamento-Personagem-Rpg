@@ -8,8 +8,8 @@ do {
   let Defesa = 0;
   let NivelPersonagem = 0;
   let Reset = 0;
-  let PoderEscolhido = ``
-  let PoderEspiritual = 0
+  let PoderEscolhido = ``;
+  let PoderEspiritual = 0;
   while (EscolherElemento === true) {
     Elemento = prompt(`Escolha seu elemento
      1- Fogo
@@ -55,8 +55,7 @@ do {
       PainelDeControle >= 6
     ) {
       alert(`Digite somente números entre 1 a 5`);
-    }
-    else if (PainelDeControle === 1) {
+    } else if (PainelDeControle === 1) {
       let Repetidor = true;
       let PainelDeTreinamento = ``;
       do {
@@ -285,90 +284,111 @@ do {
           } while (RepetidorSobre === true);
         }
       } while (Repetidor === true);
-    }
-    else if (PainelDeControle === 2) {
+    } else if (PainelDeControle === 2) {
       if (Elemento === `Fogo`) {
-        let ClasseEscolhida = ``
-        let ClasseRepetidora = true
+        let ClasseEscolhida = ``;
+        let ClasseRepetidora = true;
 
         do {
           ClasseEscolhida = prompt(`Escolha sua classe
           1- Ofensiva
           2- Defensiva
           3- Equilíbrio
-          4- Ver Habilidade`)
+          4- Ver Sobre As Classes`);
 
-          ClasseEscolhida = parseInt(ClasseEscolhida)
+          ClasseEscolhida = parseInt(ClasseEscolhida);
 
-        if (isNaN(ClasseEscolhida) || ClasseEscolhida >= 5 || ClasseEscolhida <= 0) {
-          alert(`Digite somente números de 1 a 4`)
+          if (
+            isNaN(ClasseEscolhida) ||
+            ClasseEscolhida >= 5 ||
+            ClasseEscolhida <= 0
+          ) {
+            alert(`Digite somente números de 1 a 4`);
           }
-          
+
           switch (ClasseEscolhida) {
             case 1:
-              let NomeDesconhecido = `???`
-              let PoderRepetidor = true
+              let ClasseOfensiva = ``;
+              let NomeDesconhecido = `???`;
+              let PoderRepetidor = true;
 
               do {
-                PoderEscolhido = prompt(`Escolha seu local de treinamento
-                1- Chuveiro (Nivel Requirido: 0)
-                2- Piscina (Nivel Requirido: 30)
-                3- Cachoeira (Nivel Requirido: 370)
-                4- Rio (Nivel Requirido: 3.890)
-                5- Oceano (Nivel Requirido: 14.980)
-                6- ${NomeDesconhecido} (Nivel Requirido: 54.769)
-                Poder Espiritual: ${PoderEspiritual}`)
-  
-                PoderEscolhido = parseInt(PoderEscolhido)
-                if (isNaN(PoderEscolhido) || PoderEscolhido >= 7 || PoderEscolhido <= 0) { 
-                  alert(`Digite somente números de 1 a 6`)
-                 }
+                ClasseOfensiva = prompt(`Desbloqueie ataques de água
+                1- Hálito De Água (Nível Requirido: 50)
+                2- Adaptação Aquática (Nível Requirido: 250)
+                3- Amplificação De Água (Nível Requirido: 2.500)
+                4- Andar Sobre a Água (Nível Requirido: 7.500)
+                5- Solidificação De Água (Nível Requirido: 45.000)
+                6- Manipulação Completa Sobre a Água (Nível Requirido: 150.000)
+                7- Treinamento
+                8- Ver Sobre Habilidades`);
+                ClasseOfensiva = parseInt(ClasseOfensiva);
+                if (
+                  isNaN(ClasseOfensiva) ||
+                  ClasseOfensiva >= 9 ||
+                  ClasseOfensiva <= 0
+                ) {
+                  alert(`Digite somente números de 1 a 8`);
+                } else if (ClasseOfensiva === 7) {
+                  let RepetidorTreinamentoPoder = true;
 
-                if (PoderEscolhido === 1) {
-                  alert(`Você treinou seu poder de água debaixo do Chuveiro
-                  Você upou 3 níveis`)
-                  PoderEspiritual += 3
+                  do {
+                    PoderEscolhido = prompt(`Escolha seu local de treinamento
+                    1- Chuveiro (Nivel Requirido: 0)
+                    2- Piscina (Nivel Requirido: 30)
+                    3- Cachoeira (Nivel Requirido: 370)
+                    4- Rio (Nivel Requirido: 3.890)
+                    5- Oceano (Nivel Requirido: 14.980)
+                    6- ${NomeDesconhecido} (Nivel Requirido: 54.769
+                    7- Voltar
+                    Poder Espiritual: ${PoderEspiritual}`);
+
+                    PoderEscolhido = parseInt(PoderEscolhido);
+                    if (
+                      isNaN(PoderEscolhido) ||
+                      PoderEscolhido >= 8 ||
+                      PoderEscolhido <= 0
+                    ) {
+                      alert(`Digite somente números de 1 a 6`);
+                    }
+                    if (PoderEscolhido === 1) {
+                      alert(`Você treinou seu poder de água debaixo do Chuveiro
+                      Você upou 3 níveis`);
+                      PoderEspiritual += 3;
+                    } else if (PoderEscolhido === 2) {
+                      alert(`Você treinou seu poder de água dentro de uma Piscina
+                      Você upou 62 níveis`);
+                      PoderEspiritual += 62;
+                    } else if (PoderEscolhido === 3) {
+                      alert(`Você treinou seu poder de água dentro de uma Cachoeira
+                      Você upou 367 níveis`);
+                      PoderEspiritual += 367;
+                    } else if (PoderEscolhido === 4) {
+                      alert(`Você treinou seu poder de água dentro de um Rio
+                      Você upou 1.479 níveis`);
+                      PoderEspiritual += 1479;
+                    } else if (PoderEscolhido === 5) {
+                      alert(`Você treinou seu poder de água dentro de um Oceano
+                      Você upou 7.937 níveis`);
+                      PoderEspiritual += 7937;
+                    } else if (PoderEscolhido === 6) {
+                      alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
+                      Você upou 31.897 níveis`);
+                      PoderEspiritual += 31897;
+                      NomeDesconhecido = `Fonte De Poder Aquático`;
+                    }
+                    else if (PoderEscolhido === 7) { 
+                      RepetidorTreinamentoPoder = false
+                      alert(`Voltando...`)
+                     }
+                  } while (RepetidorTreinamentoPoder === true);
                 }
-                else if (PoderEscolhido === 2) {
-                  alert(`Você treinou seu poder de água dentro de uma Piscina
-                  Você upou 62 níveis`)
-                  PoderEspiritual += 62
-                }
-                else if (PoderEscolhido === 3) {
-                  alert(`Você treinou seu poder de água dentro de uma Cachoeira
-                  Você upou 367 níveis`)
-                  PoderEspiritual += 367
-                }
-                else if (PoderEscolhido === 4) {
-                  alert(`Você treinou seu poder de água dentro de um Rio
-                  Você upou 1.479 níveis`)
-                  PoderEspiritual += 1479
-                }
-                else if (PoderEscolhido === 5) {
-                  alert(`Você treinou seu poder de água dentro de um Oceano
-                  Você upou 7.937 níveis`)
-                  PoderEspiritual += 7937
-                }
-                else if (PoderEscolhido === 6) {
-                  alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
-                  Você upou 31.897 níveis`)
-                  PoderEspiritual += 31897
-                  NomeDesconhecido = `Fonte De Poder Aquático`
-                }
-              }while(PoderRepetidor === true)
-              
+              } while (PoderRepetidor === true);
           }
-        }while(ClasseRepetidora === true)
-        
-      }
-      else if (Elemento === `Água`) {
-        
-      }
-      else if (Elemento === `Vento`) {
-        
-      }
-      else if (Elemento === `Terra`) {
-        
+        } while (ClasseRepetidora === true);
+      } else if (Elemento === `Água`) {
+      } else if (Elemento === `Vento`) {
+      } else if (Elemento === `Terra`) {
       }
     }
   }
