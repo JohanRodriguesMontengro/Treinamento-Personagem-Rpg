@@ -41,8 +41,8 @@ do {
   1- Treinamento
   2- Elemento
   3- Status
-  4- Sair
-  5- Reset
+  4- Reset
+  5- Sair
   Nome: ${NomePersonagem}
   Elemento: ${Elemento}
   Nível: ${NivelPersonagem}
@@ -323,6 +323,38 @@ do {
                 if (isNaN(PoderEscolhido) || PoderEscolhido >= 7 || PoderEscolhido <= 0) { 
                   alert(`Digite somente números de 1 a 6`)
                  }
+
+                if (PoderEscolhido === 1) {
+                  alert(`Você treinou seu poder de água debaixo do Chuveiro
+                  Você upou 3 níveis`)
+                  PoderEspiritual += 3
+                }
+                else if (PoderEscolhido === 2) {
+                  alert(`Você treinou seu poder de água dentro de uma Piscina
+                  Você upou 62 níveis`)
+                  PoderEspiritual += 62
+                }
+                else if (PoderEscolhido === 3) {
+                  alert(`Você treinou seu poder de água dentro de uma Cachoeira
+                  Você upou 367 níveis`)
+                  PoderEspiritual += 367
+                }
+                else if (PoderEscolhido === 4) {
+                  alert(`Você treinou seu poder de água dentro de um Rio
+                  Você upou 1.479 níveis`)
+                  PoderEspiritual += 1479
+                }
+                else if (PoderEscolhido === 5) {
+                  alert(`Você treinou seu poder de água dentro de um Oceano
+                  Você upou 7.937 níveis`)
+                  PoderEspiritual += 7937
+                }
+                else if (PoderEscolhido === 6) {
+                  alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
+                  Você upou 31.897 níveis`)
+                  PoderEspiritual += 31897
+                  NomeDesconhecido = `Fonte De Poder Aquático`
+                }
               }while(PoderRepetidor === true)
               
           }
