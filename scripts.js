@@ -66,29 +66,74 @@ do {
           alert(`Digite somente números entre 1 a 15`)
         }
         else if (PainelDeTreinamento === 1) {
-          alert(`Você ficou treinando na academia durante 5 horas
+          alert(`Você ficou treinando na Academia durante 5 horas
           Você evoluiu 1 nível`)
           NivelPersonagem += 1
         }
         else if (PainelDeTreinamento === 2) {
-          alert(`Você ficou treinando na cachoeira do sul durante 6 horas
+          alert(`Você ficou treinando na Cachoeira Do Sul durante 6 horas
           Você evolui 6 níveis`)
           NivelPersonagem += 6
         }
         else if (PainelDeTreinamento === 3) {
-          alert(`Você ficou treinando na cahoeira do sul durante 6 horas
-          Você evolui 6 níveis`)
-          NivelPersonagem += 6
+          alert(`Você ficou treinando em Neuschwanstein durante 3 horas
+          Você evolui 31 níveis`)
+          NivelPersonagem += 31
         }
         else if (PainelDeTreinamento === 4) {
-          alert(`Você ficou treinando na cahoeira do sul durante 6 horas
-          Você evolui 6 níveis`)
-          NivelPersonagem += 6
+          alert(`Você ficou treinando em Fukushima durante 6 horas
+          Você evolui 93 níveis`)
+          NivelPersonagem += 93
         }
         else if (PainelDeTreinamento === 5) {
-          alert(`Você ficou treinando na cahoeira do sul durante 6 horas
-          Você evolui 6 níveis`)
-          NivelPersonagem += 6
+          alert(`Você ficou treinando na Fossa Das Marianas durante 6 horas
+          Você evolui 126 níveis`)
+          NivelPersonagem += 126
+        }
+        else if (PainelDeTreinamento === 6) {
+          alert(`Você ficou treinando no Monte Everest durante 2 horas
+          Você evolui 379 níveis`)
+          NivelPersonagem += 379
+        }
+        else if (PainelDeTreinamento === 7) {
+          alert(`Você ficou treinando em Krakatoa durante 1 horas
+          Você evolui 731 níveis`)
+          NivelPersonagem += 731
+        }
+        else if (PainelDeTreinamento === 8) {
+          alert(`Você ficou treinando na Orbita Da Terra durante 30 Minutos
+          Você evolui 1893 níveis`)
+          NivelPersonagem += 1893
+        }
+        else if (PainelDeTreinamento === 9) {
+          alert(`Você ficou treinando na Estação Espacial Internacional durante 5 horas
+          Você evolui 126 níveis`)
+          NivelPersonagem += 126
+        }
+        else if (PainelDeTreinamento === 10) {
+          alert(`Você ficou treinando no Vácuo Do Espaço durante 2 horas
+          Você evolui 126 níveis`)
+          NivelPersonagem += 126
+        }
+        else if (PainelDeTreinamento === 11) {
+          alert(`Você ficou treinando na Lua Terrestre durante 6 horas
+          Você evolui 379 níveis`)
+          NivelPersonagem += 379
+        }
+        else if (PainelDeTreinamento === 12) {
+          alert(`Você ficou treinando no Sol durante 1 horas
+          Você evolui 731 níveis`)
+          NivelPersonagem += 731
+        }
+        else if (PainelDeTreinamento === 13) {
+          alert(`Você ficou treinando Fora Do Sistema Solar durante 30 Minutos
+          Você evolui 1893 níveis`)
+          NivelPersonagem += 1893
+        }
+        else if (PainelDeTreinamento === 14) {
+          alert(`Você ficou treinando Fora Da Via Láctea durante 6 horas
+          Você evolui 126 níveis`)
+          NivelPersonagem += 126
         }
       }while(Repetidor === true)
       
