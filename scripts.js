@@ -7,6 +7,7 @@ do {
   let Elemento = ``
   let Defesa = 0
   let NivelPersonagem = 0
+  let Resetar = 0
   while (EscolherElemento === true) {
     Elemento = prompt(`Escolha seu elemento
      1- Fogo
@@ -28,17 +29,32 @@ do {
   1- Treinamento
   2- Elemento
   3- Status
+  4- Sair
+  5- Resetar
   Nome: ${NomePersonagem}
   Elemento: ${Elemento}
-  Nível: ${NivelPersonagem}`)
-  
-  
-    
-    
-    
-    
-    if (isNaN(PainelDeControle) || PainelDeControle < 1 || PainelDeControle > 3) {
-      
+  Nível: ${NivelPersonagem}
+  Resets: ${Resetar}`)
+  PainelDeControle = parseInt(PainelDeControle)
+
+    if (isNaN(PainelDeControle) || PainelDeControle <= 0 || PainelDeControle >= 6) {
+      alert(`Digite somente números entre 1 a 5`)
+    }
+    else if (PainelDeControle === 1) {
+      PainelDeTreinamento = prompt(`
+      1- Academia
+      2- 
+      3- 
+      4- 
+      5- 
+      6- Monte Everest
+      7- 
+      8- Estação Espacial Internacional
+      9- Vácuo Do Espaço
+      10- 
+      11- 
+      12- Ton 618
+      13- Sobre os locais`)
     }
   }
 }while(Continuar === true)
