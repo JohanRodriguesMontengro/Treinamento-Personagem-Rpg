@@ -58,22 +58,37 @@ do {
     } else if (PainelDeControle === 1) {
       let Repetidor = true;
       let PainelDeTreinamento = ``;
+      let Bloqueadores = {
+        BloqueadorNome1: `Bloqueado`,
+        BloqueadorNome2: `Bloqueado`,
+        BloqueadorNome3: `Bloqueado`,
+        BloqueadorNome4: `Bloqueado`,
+        BloqueadorNome5: `Bloqueado`,
+        BloqueadorNome6: `Bloqueado`,
+        BloqueadorNome7: `Bloqueado`,
+        BloqueadorNome8: `Bloqueado`,
+        BloqueadorNome9: `Bloqueado`,
+        BloqueadorNome10: `Bloqueado`,
+        BloqueadorNome11: `Bloqueado`,
+        BloqueadorNome12: `Bloqueado`,
+        BloqueadorNome13: `Bloqueado`
+      };
       do {
         PainelDeTreinamento = prompt(`
         1- Academia (Nivel Requirido: 0)
-        2- Cachoeira Do Sul (Nivel Requirido: 15)
-        3- Neuschwanstein (Nivel Requirido: 163)
-        4- Fukushima (Nivel Requirido: 534)
-        5- Fossa Das Marianas (Nivel Requirido: 4.592)
-        6- Monte Everest (Nivel Requirido: 8.849)
-        7- Krakatoa (Nivel Requirido: 15.867)
-        8- Orbita Da Terra (Nivel Requirido: 35.795)
-        9- Estação Espacial Internacional (Nivel Requirido: 78.583)
-        10- Vácuo Do Espaço (Nivel Requirido: 278.945)
-        11- Lua Terrestre(Nivel Requirido: 608.842)
-        12- Sol (Nivel Requirido: 1.598.378)
-        13- Fora Do Sistema Solar (Nivel Requirido: 14.759.645)
-        14- Fora Da Via Láctea (Nivel Requirido: 329.574.297)
+        2- Cachoeira Do Sul (Nivel Requirido: 15 (${Bloqueadores.BloqueadorNome1}))
+        3- Neuschwanstein (Nivel Requirido: 163 (${Bloqueadores.BloqueadorNome2}))
+        4- Fukushima (Nivel Requirido: 534 (${Bloqueadores.BloqueadorNome3}))
+        5- Fossa Das Marianas (Nivel Requirido: 4.592 (${Bloqueadores.BloqueadorNome4}))
+        6- Monte Everest (Nivel Requirido: 8.849 (${Bloqueadores.BloqueadorNome5}))
+        7- Krakatoa (Nivel Requirido: 15.867 (${Bloqueadores.BloqueadorNome6}))
+        8- Orbita Da Terra (Nivel Requirido: 35.795 (${Bloqueadores.BloqueadorNome7}))
+        9- Estação Espacial Internacional (Nivel Requirido: 78.583 (${Bloqueadores.BloqueadorNome8}))
+        10- Vácuo Do Espaço (Nivel Requirido: 278.945 (${Bloqueadores.BloqueadorNome9}))
+        11- Lua Terrestre(Nivel Requirido: 608.842 (${Bloqueadores.BloqueadorNome10}))
+        12- Sol (Nivel Requirido: 1.598.378 (${Bloqueadores.BloqueadorNome11}))
+        13- Fora Do Sistema Solar (Nivel Requirido: 14.759.645 (${Bloqueadores.BloqueadorNome12}))
+        14- Fora Da Via Láctea (Nivel Requirido: 329.574.297 (${Bloqueadores.BloqueadorNome13}))
         15- Sobre os locais
         16- Voltar
         Nivel Atual: ${NivelPersonagem}`);
@@ -89,72 +104,150 @@ do {
         if (PainelDeTreinamento === 1 && NivelPersonagem >= 0) {
           alert(`Você ficou treinando na Academia durante 5 horas
           Você evoluiu 2 níveis`);
-          NivelPersonagem += 2;
+          elPersonagem += 2;
         }
-        if (PainelDeTreinamento === 2 && NivelPersonagem >= 15) {
-          alert(`Você ficou treinando na Cachoeira Do Sul durante 6 horas
+        if (PainelDeTreinamento === 2) {
+          if (NivelPersonagem >= 15) {
+            alert(`Você ficou treinando na Cachoeira Do Sul durante 6 horas
           Você evolui 16 níveis`);
-          NivelPersonagem += 16;
+            NivelPersonagem += 16;
+            Bloqueadores.BloqueadorNome1 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 3 && NivelPersonagem >= 163) {
-          alert(`Você ficou treinando em Neuschwanstein durante 3 horas
+        if (PainelDeTreinamento === 3) {
+          if (NivelPersonagem >= 163) {
+            alert(`Você ficou treinando em Neuschwanstein durante 3 horas
           Você evolui 51 níveis`);
-          NivelPersonagem += 51;
+            NivelPersonagem += 51;
+            Bloqueadores.BloqueadorNome2 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 4 && NivelPersonagem >= 534) {
-          alert(`Você ficou treinando em Fukushima durante 6 horas
+        if (PainelDeTreinamento === 4) {
+          if (NivelPersonagem >= 534) {
+            alert(`Você ficou treinando em Fukushima durante 6 horas
           Você evolui 93 níveis`);
-          NivelPersonagem += 93;
+            NivelPersonagem += 93;
+            Bloqueadores.BloqueadorNome3 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 5 && NivelPersonagem >= 4592) {
-          alert(`Você ficou treinando na Fossa Das Marianas durante 6 horas
+        if (PainelDeTreinamento === 5) {
+          if (NivelPersonagem >= 4592) {
+            alert(`Você ficou treinando na Fossa Das Marianas durante 6 horas
           Você evolui 126 níveis`);
-          NivelPersonagem += 126;
+            NivelPersonagem += 126;
+            Bloqueadores.BloqueadorNome4 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 6 && NivelPersonagem >= 8849) {
-          alert(`Você ficou treinando no Monte Everest durante 2 horas
+        if (PainelDeTreinamento === 6) {
+          if (NivelPersonagem >= 8849) {
+            alert(`Você ficou treinando no Monte Everest durante 2 horas
           Você evolui 379 níveis`);
-          NivelPersonagem += 379;
+            NivelPersonagem += 379;
+            Bloqueadores.BloqueadorNome5 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 7 && NivelPersonagem >= 15867) {
-          alert(`Você ficou treinando em Krakatoa durante 1 horas
+        if (PainelDeTreinamento === 7) {
+          if (NivelPersonagem >= 15867) {
+            alert(`Você ficou treinando em Krakatoa durante 1 horas
           Você evolui 731 níveis`);
-          NivelPersonagem += 731;
+            NivelPersonagem += 731;
+            Bloqueadores.BloqueadorNome6 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 8 && NivelPersonagem >= 35795) {
-          alert(`Você ficou treinando na Orbita Da Terra durante 30 Minutos
+        if (PainelDeTreinamento === 8) {
+          if (NivelPersonagem >= 35795) {
+            alert(`Você ficou treinando na Orbita Da Terra durante 30 Minutos
           Você evolui 1.893 níveis`);
-          NivelPersonagem += 1893;
+            NivelPersonagem += 1893;
+            Bloqueadores.BloqueadorNome7 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 9 && NivelPersonagem >= 78583) {
-          alert(`Você ficou treinando na Estação Espacial Internacional durante 5 horas
+        if (PainelDeTreinamento === 9) {
+          if (NivelPersonagem >= 78583) {
+            alert(`Você ficou treinando na Estação Espacial Internacional durante 5 horas
           Você evolui 3.126 níveis`);
-          NivelPersonagem += 3126;
+            NivelPersonagem += 3126;
+            Bloqueadores.BloqueadorNome8 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 10 && NivelPersonagem >= 278945) {
-          alert(`Você ficou treinando no Vácuo Do Espaço durante 2 horas
+        if (PainelDeTreinamento === 10) {
+          if (NivelPersonagem >= 278945) {
+            alert(`Você ficou treinando no Vácuo Do Espaço durante 2 horas
           Você evolui 8.542 níveis`);
-          NivelPersonagem += 8542;
+            NivelPersonagem += 8542;
+            Bloqueadores.BloqueadorNome9 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 11 && NivelPersonagem >= 608842) {
-          alert(`Você ficou treinando na Lua Terrestre durante 6 horas
+        if (PainelDeTreinamento === 11) {
+          if (NivelPersonagem >= 608842) {
+            alert(`Você ficou treinando na Lua Terrestre durante 6 horas
           Você evolui 18.479 níveis`);
-          NivelPersonagem += 18479;
+            NivelPersonagem += 18479;
+            Bloqueadores.BloqueadorNome10 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 12 && NivelPersonagem >= 1598378) {
-          alert(`Você ficou treinando no Sol durante 1 horas
+        if (PainelDeTreinamento === 12) {
+          if (NivelPersonagem >= 1598378) {
+            alert(`Você ficou treinando no Sol durante 1 horas
           Você evolui 281.371 níveis`);
-          NivelPersonagem += 281371;
+            NivelPersonagem += 281371;
+            Bloqueadores.BloqueadorNome11 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 13 && NivelPersonagem >= 14759645) {
-          alert(`Você ficou treinando Fora Do Sistema Solar durante 30 Minutos
+        if (PainelDeTreinamento === 13) {
+          if (NivelPersonagem >= 14759645) {
+            alert(`Você ficou treinando Fora Do Sistema Solar durante 30 Minutos
           Você evolui 9.421.673 níveis`);
-          NivelPersonagem += 9421673;
+            NivelPersonagem += 9421673;
+            Bloqueadores.BloqueadorNome12 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
-        if (PainelDeTreinamento === 14 && NivelPersonagem >= 329574297) {
-          alert(`Você ficou treinando Fora Da Via Láctea durante 6 horas
+        if (PainelDeTreinamento === 14) {
+          if (NivelPersonagem >= 329574297) {
+            alert(`Você ficou treinando Fora Da Via Láctea durante 6 horas
           Você evolui 41.845.176 níveis`);
-          NivelPersonagem += 41845176;
+            NivelPersonagem += 41845176;
+            Bloqueadores.BloqueadorNome13 = `Desbloqueado`;
+          } else {
+            alert(`Seu nível não é suficiente para esse tipo de treinamento
+            Seu nível atual é de: ${NivelPersonagem}`);
+          }
         }
         if (PainelDeTreinamento === 15) {
           let PainelDeTreinamentoSobre = ``;
@@ -288,6 +381,14 @@ do {
       if (Elemento === `Fogo`) {
         let ClasseEscolhida = ``;
         let ClasseRepetidora = true;
+        let Bloqueadores = {
+          BloqueadorEspiritual1: `Bloqueado`,
+          BloqueadorEspiritual2: `Bloqueado`,
+          BloqueadorEspiritual3: `Bloqueado`,
+          BloqueadorEspiritual4: `Bloqueado`,
+          BloqueadorEspiritual5: `Bloqueado`,
+          BloqueadorEspiritual6: `Bloqueado`,
+        }
 
         do {
           ClasseEscolhida = prompt(`Escolha sua classe
@@ -314,14 +415,15 @@ do {
 
               do {
                 ClasseOfensiva = prompt(`Desbloqueie ataques de água
-                1- Hálito De Água (Nível Requirido: 50)
-                2- Adaptação Aquática (Nível Requirido: 250)
-                3- Amplificação De Água (Nível Requirido: 2.500)
-                4- Andar Sobre a Água (Nível Requirido: 7.500)
-                5- Solidificação De Água (Nível Requirido: 45.000)
-                6- Manipulação Completa Sobre a Água (Nível Requirido: 150.000)
+                1- Hálito De Água (Nível Requirido: 50 (${Bloqueadores.BloqueadorEspiritual1}))
+                2- Adaptação Aquática (Nível Requirido: 250 (${Bloqueadores.BloqueadorEspiritual2}))
+                3- Amplificação De Água (Nível Requirido: 2.500 (${Bloqueadores.BloqueadorEspiritual3}))
+                4- Andar Sobre a Água (Nível Requirido: 7.500 (${Bloqueadores.BloqueadorEspiritual4}))
+                5- Solidificação De Água (Nível Requirido: 45.000 (${Bloqueadores.BloqueadorEspiritual5}))
+                6- Manipulação Completa Sobre a Água (Nível Requirido: 150.000 (${Bloqueadores.BloqueadorEspiritual6}))
                 7- Treinamento
-                8- Ver Sobre Habilidades`);
+                8- Ver Sobre Habilidades
+                Poder Espiritual: ${PoderEspiritual}`);
                 ClasseOfensiva = parseInt(ClasseOfensiva);
                 if (
                   isNaN(ClasseOfensiva) ||
@@ -329,11 +431,35 @@ do {
                   ClasseOfensiva <= 0
                 ) {
                   alert(`Digite somente números de 1 a 8`);
-                } else if (ClasseOfensiva === 7) {
-                  let RepetidorTreinamentoPoder = true;
-
-                  do {
-                    PoderEscolhido = prompt(`Escolha seu local de treinamento
+                } else if (ClasseOfensiva === 1) {
+                  if (PoderEspiritual >= 50) {
+                    alert(`A habilidade Hálito De Água foi desbloqueada`)
+                  }
+                  else if (ClasseOfensiva === 2) {
+                    if (PoderEspiritual >= 250) {
+                      alert(`A habilidade Adaptação Aquática foi desbloqueada`)
+                    }
+                    else if (ClasseOfensiva === 3) {
+                      if (PoderEspiritual >= 2500) {
+                        alert(`A habilidade Amplificação De Água foi desbloqueada`)
+                      }
+                      else if (ClasseOfensiva === 4) {
+                        if (PoderEspiritual >= 7500) {
+                          alert(`A habilidade Andar Sobre a Água foi desbloqueada`)
+                        }
+                        else if (ClasseOfensiva === 5) {
+                          if (PoderEspiritual >= 45000) {
+                            alert(`A habilidade Solidificação De Água foi desbloqueada`)
+                          }
+                          else if (ClasseOfensiva === 6) {
+                            if (PoderEspiritual >= 150000) {
+                              alert(`A habilidade Manipulação Completa Sobre a Água foi desbloqueada`)
+                            }
+                          } else if (ClasseOfensiva === 7) {
+                            let RepetidorTreinamentoPoder = true;
+                          }
+                          do {
+                            PoderEscolhido = prompt(`Escolha seu local de treinamento
                     1- Chuveiro (Nivel Requirido: 0)
                     2- Piscina (Nivel Requirido: 30)
                     3- Cachoeira (Nivel Requirido: 370)
@@ -343,53 +469,59 @@ do {
                     7- Voltar
                     Poder Espiritual: ${PoderEspiritual}`);
 
-                    PoderEscolhido = parseInt(PoderEscolhido);
-                    if (
-                      isNaN(PoderEscolhido) ||
-                      PoderEscolhido >= 8 ||
-                      PoderEscolhido <= 0
-                    ) {
-                      alert(`Digite somente números de 1 a 6`);
-                    }
-                    if (PoderEscolhido === 1) {
-                      alert(`Você treinou seu poder de água debaixo do Chuveiro
+                            PoderEscolhido = parseInt(PoderEscolhido);
+                            if (
+                              isNaN(PoderEscolhido) ||
+                              PoderEscolhido >= 8 ||
+                              PoderEscolhido <= 0
+                            ) {
+                              alert(`Digite somente números de 1 a 6`);
+                            }
+                            if (PoderEscolhido === 1) {
+                              alert(`Você treinou seu poder de água debaixo do Chuveiro
                       Você upou 3 níveis`);
-                      PoderEspiritual += 3;
-                    } else if (PoderEscolhido === 2) {
-                      alert(`Você treinou seu poder de água dentro de uma Piscina
+                              PoderEspiritual += 3;
+                            } else if (PoderEscolhido === 2) {
+                              alert(`Você treinou seu poder de água dentro de uma Piscina
                       Você upou 62 níveis`);
-                      PoderEspiritual += 62;
-                    } else if (PoderEscolhido === 3) {
-                      alert(`Você treinou seu poder de água dentro de uma Cachoeira
+                              PoderEspiritual += 62;
+                            } else if (PoderEscolhido === 3) {
+                              alert(`Você treinou seu poder de água dentro de uma Cachoeira
                       Você upou 367 níveis`);
-                      PoderEspiritual += 367;
-                    } else if (PoderEscolhido === 4) {
-                      alert(`Você treinou seu poder de água dentro de um Rio
+                              PoderEspiritual += 367;
+                            } else if (PoderEscolhido === 4) {
+                              alert(`Você treinou seu poder de água dentro de um Rio
                       Você upou 1.479 níveis`);
-                      PoderEspiritual += 1479;
-                    } else if (PoderEscolhido === 5) {
-                      alert(`Você treinou seu poder de água dentro de um Oceano
+                              PoderEspiritual += 1479;
+                            } else if (PoderEscolhido === 5) {
+                              alert(`Você treinou seu poder de água dentro de um Oceano
                       Você upou 7.937 níveis`);
-                      PoderEspiritual += 7937;
-                    } else if (PoderEscolhido === 6) {
-                      alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
+                              PoderEspiritual += 7937;
+                            } else if (PoderEscolhido === 6) {
+                              alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
                       Você upou 31.897 níveis`);
-                      PoderEspiritual += 31897;
-                      NomeDesconhecido = `Fonte De Poder Aquático`;
+                              PoderEspiritual += 31897;
+                              NomeDesconhecido = `Fonte De Poder Aquático`;
+                            } else if (PoderEscolhido === 7) {
+                              RepetidorTreinamentoPoder = false;
+                              alert(`Voltando...`);
+                            }
+                          } while (RepetidorTreinamentoPoder === true);
+                        }
+                      } 
                     }
-                    else if (PoderEscolhido === 7) { 
-                      RepetidorTreinamentoPoder = false
-                      alert(`Voltando...`)
-                     }
-                  } while (RepetidorTreinamentoPoder === true);
+                  } while (ClasseRepetidora === true);
+                } else if (Elemento === `Água`) {
+                } else if (Elemento === `Vento`) {
+                } else if (Elemento === `Terra`) {
                 }
-              } while (PoderRepetidor === true);
-          }
-        } while (ClasseRepetidora === true);
-      } else if (Elemento === `Água`) {
-      } else if (Elemento === `Vento`) {
-      } else if (Elemento === `Terra`) {
-      }
+              }while(PoderRepetidor === true)
+            }
+        }while (PoderRepetidor === true);
+      } 
+    
     }
+  
   }
-} while (Continuar === true);
+
+} while (Continuar === true)
