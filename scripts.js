@@ -378,7 +378,7 @@ do {
         }
       } while (Repetidor === true);
     } else if (PainelDeControle === 2) {
-      if (Elemento === `Fogo`) {
+      if (Elemento === `Água`) {
         let ClasseEscolhida = ``;
         let ClasseRepetidora = true;
         let Bloqueadores = {
@@ -703,7 +703,7 @@ do {
                   }
                 } else if (ClasseEquilibrada === 3) {
                   if (PoderEspiritual >= 2500) {
-                    alert(`A habilidade Defesa Hidrocinética foi desbloqueada`);
+                    alert(`A habilidade Amplificação De Água foi desbloqueada`);
                     Bloqueadores.BloqueadorEspiritual3 = `Desbloqueado`;
                   }
                 } else if (ClasseEquilibrada === 4) {
@@ -714,17 +714,17 @@ do {
                 } else if (ClasseEquilibrada === 5) {
                   if (PoderEspiritual >= 45000) {
                     alert(
-                      `A habilidade Andar Sobre As Águas foi desbloqueada`
+                      `A habilidade Solidificação De Água foi desbloqueada`
                     );
                     Bloqueadores.BloqueadorEspiritual5 = `Desbloqueado`;
                   }
                 } else if (ClasseEquilibrada === 6) {
                   if (PoderEspiritual >= 150000) {
                     alert(
-                      `A habilidade Criação Divina da Parede Aquática foi desbloqueada`
+                      `A habilidade Ataque Supremo Do Rei Dos Mares foi desbloqueada`
                     );
                     Bloqueadores.BloqueadorEspiritual6 = `Desbloqueado`;
-                    NomeDesconhecidoEquilibrada = `Criação Divina da Parede Aquática`;
+                    NomeDesconhecidoEquilibrada = `Ataque Supremo Do Rei Dos Mares`;
                   }
                 } else if (ClasseEquilibrada === 7) {
                   let RepetidorTreinamentoPoderEquilibrada = true;
@@ -798,9 +798,58 @@ do {
                 }
               } while (PoderRepetidorEquilibrada === true);
               break;
+            case 4:
+              let Classes = ``
+              let ClassesRepetidor = true
+              let InformacoesClasses = ``
+              let HabilidadeDesconhecida
+              do {
+                let Classes = prompt(`Qual classe gostaria de saber sobre?
+                1- Ofensiva
+                2- Defensiva
+                3- Equilíbrio`)
+
+                if (isNaN(Classes) || Classes >= 4 || Classes <= 0) { 
+                  alert(`Digite somente números entre 1 a 3`)
+                 }
+                else if (Classes === 1) {
+                  let Repetidor = true
+                  do {
+                    InformacoesClasses = prompt(`
+                  1- Hálito De Água (Nível Requirido: 50)
+                2- Adaptação Aquática (Nível Requirido: 250)
+                3- Amplificação De Água (Nível Requirido: 2.500)
+                4- Andar Sobre a Água (Nível Requirido: 7.500)
+                5- Solidificação De Água (Nível Requirido: 45.000)
+                6- ${HabilidadeDesconhecida} (Nível Requirido: 150.000)
+                `)
+InformacoesClasses = parseInt(InformacoesClasses)
+                    if (isNaN(InformacoesClasses) || InformacoesClasses >= 7 || InformacoesClasses <= 0) {
+                      alert(`Digite somente números entre 1 a 6`)
+                    }
+                    else if (InformacoesClasses === 1) {
+                      alert(`O usuário é capaz de gerar água dentro deles de uma maneira que lhes permita moldar a expiração do efeito. Essas formas podem incluir rajadas, correntes, esferas e até uma névoa da boca.`)
+                    }
+                    else if (InformacoesClasses === 2) {
+alert(`O usuário é capaz de sobreviver plenamente e ter sua fisiologia adaptada a ambientes subaquáticos, sendo capaz de permanecer submerso tão confortavelmente quanto qualquer ser marinho, com capacidades como a de respirar debaixo d'água, nadar a velocidades maiores que a de um ser humano comum e até mesmo resistir à alta pressão submarina e a águas em temperaturas extremas. Além disso, ele possui sentidos perfeitamente funcionais, sem que a distorção da água os atrapalhe, podendo, por exemplo, ignorar impurezas que normalmente reduziriam sua visibilidade.O usuário tem o poder de aumentar as quantidades da água e todos os poderes e aspectos relacionados ao elemento água, potenciando ao ponto de causar grandes barreiras de água, ondas, correntes de água, etc.`)
+                    }
+                    else if (InformacoesClasses === 4) {
+                      alert(`de andar na superfície da água. Pode ser obtida pela Super Velocidade. O usuário é capaz de andar, correr e ficar parado na superfície da água, o fazendo como se a mesma estivesse em estado`)
+                    }
+                    else if (InformacoesClasses === 5) {
+                      alert(`O usuário é capaz de solidificar a água como uma rocha extremamente resistente`)
+                    }
+                    else if (InformacoesClasses === 6) {
+                      alert(`Essa habilidade é secreta, treine para ela ser descoberta`)
+                    }
+                  }while(Repetidor === true)
+                  
+                 }
+
+              }while(ClassesRepetidor === true)
           }
         } while (PoderRepetidor === true);
-      } else if (Elemento === `Água`) {
+      } else if (Elemento === `Fogo`) {
       } else if (Elemento === `Vento`) {
       } else if (Elemento === `Terra`) {
       }
