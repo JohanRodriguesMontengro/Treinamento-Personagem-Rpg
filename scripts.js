@@ -10,6 +10,7 @@ do {
   let Reset = 0;
   let PoderEscolhido = ``;
   let PoderEspiritual = 0;
+  let habilidadeCuriosidade = false;
   while (EscolherElemento === true) {
     Elemento = prompt(`Escolha seu elemento
      1- Fogo
@@ -583,9 +584,7 @@ do {
                   }
                 } else if (ClasseDefensiva === 5) {
                   if (PoderEspiritual >= 45000) {
-                    alert(
-                      `A habilidade Andar Sobre As Águas foi desbloqueada`
-                    );
+                    alert(`A habilidade Andar Sobre As Águas foi desbloqueada`);
                     Bloqueadores.BloqueadorEspiritual5 = `Desbloqueado`;
                   }
                 } else if (ClasseDefensiva === 6) {
@@ -799,21 +798,21 @@ do {
               } while (PoderRepetidorEquilibrada === true);
               break;
             case 4:
-              let Classes = ``
-              let ClassesRepetidor = true
-              let InformacoesClasses = ``
-              let HabilidadeDesconhecida
+              let Classes = ``;
+              let ClassesRepetidor = true;
+              let InformacoesClasses = ``;
+              let HabilidadeDesconhecida;
               do {
                 let Classes = prompt(`Qual classe gostaria de saber sobre?
                 1- Ofensiva
                 2- Defensiva
-                3- Equilíbrio`)
+                3- Equilíbrio
+                4- Voltar`);
 
-                if (isNaN(Classes) || Classes >= 4 || Classes <= 0) { 
-                  alert(`Digite somente números entre 1 a 3`)
-                 }
-                else if (Classes === 1) {
-                  let Repetidor = true
+                if (isNaN(Classes) || Classes >= 5 || Classes <= 0) {
+                  alert(`Digite somente números entre 1 a 4`);
+                } else if (Classes === 1) {
+                  let Repetidor = true;
                   do {
                     InformacoesClasses = prompt(`
                   1- Hálito De Água (Nível Requirido: 50)
@@ -822,31 +821,76 @@ do {
                 4- Andar Sobre a Água (Nível Requirido: 7.500)
                 5- Solidificação De Água (Nível Requirido: 45.000)
                 6- ${HabilidadeDesconhecida} (Nível Requirido: 150.000)
-                `)
-InformacoesClasses = parseInt(InformacoesClasses)
-                    if (isNaN(InformacoesClasses) || InformacoesClasses >= 7 || InformacoesClasses <= 0) {
-                      alert(`Digite somente números entre 1 a 6`)
+                `);
+                    InformacoesClasses = parseInt(InformacoesClasses);
+                    if (
+                      isNaN(InformacoesClasses) ||
+                      InformacoesClasses >= 7 ||
+                      InformacoesClasses <= 0
+                    ) {
+                      alert(`Digite somente números entre 1 a 6`);
+                    } else if (InformacoesClasses === 1) {
+                      alert(
+                        `O usuário é capaz de gerar água dentro deles de uma maneira que lhes permita moldar a expiração do efeito. Essas formas podem incluir rajadas, correntes, esferas e até uma névoa da boca.`
+                      );
+                    } else if (InformacoesClasses === 2) {
+                      alert(
+                        `O usuário é capaz de sobreviver plenamente e ter sua fisiologia adaptada a ambientes subaquáticos, sendo capaz de permanecer submerso tão confortavelmente quanto qualquer ser marinho, com capacidades como a de respirar debaixo d'água, nadar a velocidades maiores que a de um ser humano comum e até mesmo resistir à alta pressão submarina e a águas em temperaturas extremas. Além disso, ele possui sentidos perfeitamente funcionais, sem que a distorção da água os atrapalhe, podendo, por exemplo, ignorar impurezas que normalmente reduziriam sua visibilidade.O usuário tem o poder de aumentar as quantidades da água e todos os poderes e aspectos relacionados ao elemento água, potenciando ao ponto de causar grandes barreiras de água, ondas, correntes de água, etc.`
+                      );
+                    } else if (InformacoesClasses === 3) {
+                      alert(
+                        `O  usuário tem o poder de aumentar as quantidades da água e todos os poderes e aspectos relacionados ao elemento água, potenciando ao ponto de causar grandes barreiras de água, ondas, correntes de água, etc.`
+                      );
+                    } else if (InformacoesClasses === 4) {
+                      alert(
+                        `de andar na superfície da água. Pode ser obtida pela Super Velocidade. O usuário é capaz de andar, correr e ficar parado na superfície da água, o fazendo como se a mesma estivesse em estado`
+                      );
+                    } else if (InformacoesClasses === 5) {
+                      alert(
+                        `O usuário é capaz de solidificar a água como uma rocha extremamente resistente`
+                      );
+                    } else if (InformacoesClasses === 6) {
+                      alert(
+                        `Essa habilidade é secreta, treine para ela ser descoberta`
+                      );
                     }
-                    else if (InformacoesClasses === 1) {
-                      alert(`O usuário é capaz de gerar água dentro deles de uma maneira que lhes permita moldar a expiração do efeito. Essas formas podem incluir rajadas, correntes, esferas e até uma névoa da boca.`)
-                    }
-                    else if (InformacoesClasses === 2) {
-alert(`O usuário é capaz de sobreviver plenamente e ter sua fisiologia adaptada a ambientes subaquáticos, sendo capaz de permanecer submerso tão confortavelmente quanto qualquer ser marinho, com capacidades como a de respirar debaixo d'água, nadar a velocidades maiores que a de um ser humano comum e até mesmo resistir à alta pressão submarina e a águas em temperaturas extremas. Além disso, ele possui sentidos perfeitamente funcionais, sem que a distorção da água os atrapalhe, podendo, por exemplo, ignorar impurezas que normalmente reduziriam sua visibilidade.O usuário tem o poder de aumentar as quantidades da água e todos os poderes e aspectos relacionados ao elemento água, potenciando ao ponto de causar grandes barreiras de água, ondas, correntes de água, etc.`)
-                    }
-                    else if (InformacoesClasses === 4) {
-                      alert(`de andar na superfície da água. Pode ser obtida pela Super Velocidade. O usuário é capaz de andar, correr e ficar parado na superfície da água, o fazendo como se a mesma estivesse em estado`)
-                    }
-                    else if (InformacoesClasses === 5) {
-                      alert(`O usuário é capaz de solidificar a água como uma rocha extremamente resistente`)
-                    }
-                    else if (InformacoesClasses === 6) {
-                      alert(`Essa habilidade é secreta, treine para ela ser descoberta`)
-                    }
-                  }while(Repetidor === true)
-                  
-                 }
+                  } while (Repetidor === true);
+                } else if (Classes === 2) {
+                  let Repetidor = true;
+                  do {
+                    InformacoesClasses = prompt(`
+                    1- Hálito De Água (Nível Requirido: 50)
+                    2- Defesa Aquacinética (Nível Requirido: 250)
+                    3- Defesa Hidrocinética (Nível Requirido: 2.500)
+                    4- Exoesqueleto De Água (Nível Requirido: 7.500)
+                    5- Andar Sobre As Águas (Nível Requirido: 45.000)
+                    6- ${NomeDesconhecidoDefensiva} (Nível Requirido: 150.000)
+                `);
+                    InformacoesClasses = parseInt(InformacoesClasses);
+                    if (
+                      isNaN(InformacoesClasses) ||
+                      InformacoesClasses >= 7 ||
+                      InformacoesClasses <= 0
+                    ) {
+                      alert(`Digite somente números entre 1 a 6`);
+                    } else if (InformacoesClasses === 1) {
+                      alert(`O usuário é capaz de gerar água dentro deles de uma maneira que lhes permita moldar a expiração do efeito. Essas formas podem incluir rajadas, correntes, esferas e até uma névoa da boca.`);
+                    } else if (InformacoesClasses === 2) {
+                      alert(`O usuário é capaz de moldar a água e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`);
+                    } else if (InformacoesClasses === 3) {
+                      alert(`O usuário é capaz de moldar a água e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`);
+                    } else if (InformacoesClasses === 4) {
+                      alert(`O usuário possui a capacidade de formar uma espécie de armadura feita de água à volta do próprio corpo para proteção ou para melhorar a condição física. Com treino, o usuário pode manipular a armadura para formar construtos ou usá-la para teletransporte.`);
+                    } else if (InformacoesClasses === 5) {
+                      alert(`O usuário é capaz de andar, correr e ficar parado na superfície da água, o fazendo como se a mesma estivesse em estado sólido.
 
-              }while(ClassesRepetidor === true)
+                      A caminhada pela superfície hídrica pode ser obtida também quando se atinge altas velocidades. Por isso, quando estes tipos de usuários a utilizam não podem diminuir sua velocidade ou parar de correr.`);
+                    } else if (InformacoesClasses === 6) {
+                      alert(`Essa habilidade é secreta, treine para ela ser descoberta`);
+                    }
+                  } while (Repetidor === true);
+                }
+              } while (ClassesRepetidor === true);
           }
         } while (PoderRepetidor === true);
       } else if (Elemento === `Fogo`) {
