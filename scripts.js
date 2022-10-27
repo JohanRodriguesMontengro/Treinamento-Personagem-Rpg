@@ -104,7 +104,7 @@ do {
         if (PainelDeTreinamento === 1 && NivelPersonagem >= 0) {
           alert(`Você ficou treinando na Academia durante 5 horas
           Você evoluiu 2 níveis`);
-          elPersonagem += 2;
+          NivelPersonagem += 2;
         }
         if (PainelDeTreinamento === 2) {
           if (NivelPersonagem >= 15) {
@@ -387,8 +387,8 @@ do {
           BloqueadorEspiritual3: `Bloqueado`,
           BloqueadorEspiritual4: `Bloqueado`,
           BloqueadorEspiritual5: `Bloqueado`,
-          BloqueadorEspiritual6: `Bloqueado`,
-        }
+          BloqueadorEspiritual6: `Bloqueado`
+        };
 
         do {
           ClasseEscolhida = prompt(`Escolha sua classe
@@ -420,9 +420,9 @@ do {
                 3- Amplificação De Água (Nível Requirido: 2.500 (${Bloqueadores.BloqueadorEspiritual3}))
                 4- Andar Sobre a Água (Nível Requirido: 7.500 (${Bloqueadores.BloqueadorEspiritual4}))
                 5- Solidificação De Água (Nível Requirido: 45.000 (${Bloqueadores.BloqueadorEspiritual5}))
-                6- Manipulação Completa Sobre a Água (Nível Requirido: 150.000 (${Bloqueadores.BloqueadorEspiritual6}))
+                6- ${NomeDesconhecido} (Nível Requirido: 150.000 (${Bloqueadores.BloqueadorEspiritual6}))
                 7- Treinamento
-                8- Ver Sobre Habilidades
+                8- Ver Sobre as Habilidades
                 Poder Espiritual: ${PoderEspiritual}`);
                 ClasseOfensiva = parseInt(ClasseOfensiva);
                 if (
@@ -433,95 +433,97 @@ do {
                   alert(`Digite somente números de 1 a 8`);
                 } else if (ClasseOfensiva === 1) {
                   if (PoderEspiritual >= 50) {
-                    alert(`A habilidade Hálito De Água foi desbloqueada`)
+                    alert(`A habilidade Hálito De Água foi desbloqueada`);
+                    Bloqueadores.BloqueadorEspiritual1 = `Desbloqueado`;
                   }
-                  else if (ClasseOfensiva === 2) {
-                    if (PoderEspiritual >= 250) {
-                      alert(`A habilidade Adaptação Aquática foi desbloqueada`)
+                } else if (ClasseOfensiva === 2) {
+                  if (PoderEspiritual >= 250) {
+                    alert(`A habilidade Adaptação Aquática foi desbloqueada`);
+                    Bloqueadores.BloqueadorEspiritual2 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensiva === 3) {
+                  if (PoderEspiritual >= 2500) {
+                    alert(`A habilidade Amplificação De Água foi desbloqueada`);
+                    Bloqueadores.BloqueadorEspiritual3 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensiva === 4) {
+                  if (PoderEspiritual >= 7500) {
+                    alert(`A habilidade Andar Sobre a Água foi desbloqueada`);
+                    Bloqueadores.BloqueadorEspiritual4 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensiva === 5) {
+                  if (PoderEspiritual >= 45000) {
+                    alert(
+                      `A habilidade Solidificação De Água foi desbloqueada`
+                    );
+                    Bloqueadores.BloqueadorEspiritual5 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensiva === 6) {
+                  if (PoderEspiritual >= 150000) {
+                    alert(
+                      `A habilidade Manipulação Completa Sobre a Água foi desbloqueada`
+                    );
+                    Bloqueadores.BloqueadorEspiritual6 = `Desbloqueado`;
+                    NomeDesconhecido = `Manipulação Completa Sobre a Água`
+                  }
+                } else if (ClasseOfensiva === 7) {
+                  let RepetidorTreinamentoPoder = true;
+                  do {
+                    PoderEscolhido = prompt(`Escolha seu local de treinamento
+                  1- Chuveiro (Nivel Requirido: 0)
+                  2- Piscina (Nivel Requirido: 30)
+                  3- Cachoeira (Nivel Requirido: 370)
+                  4- Rio (Nivel Requirido: 3.890)
+                  5- Oceano (Nivel Requirido: 14.980)
+                  6- Fonte De Poder Aquático (Nivel Requirido: 54.769
+                  7- Voltar
+                  Poder Espiritual: ${PoderEspiritual}`);
+                    PoderEscolhido = parseInt(PoderEscolhido);
+                    if (
+                      isNaN(PoderEscolhido) ||
+                      PoderEscolhido >= 8 ||
+                      PoderEscolhido <= 0
+                    ) {
+                      alert(`Digite somente números de 1 a 6`);
                     }
-                    else if (ClasseOfensiva === 3) {
-                      if (PoderEspiritual >= 2500) {
-                        alert(`A habilidade Amplificação De Água foi desbloqueada`)
-                      }
-                      else if (ClasseOfensiva === 4) {
-                        if (PoderEspiritual >= 7500) {
-                          alert(`A habilidade Andar Sobre a Água foi desbloqueada`)
-                        }
-                        else if (ClasseOfensiva === 5) {
-                          if (PoderEspiritual >= 45000) {
-                            alert(`A habilidade Solidificação De Água foi desbloqueada`)
-                          }
-                          else if (ClasseOfensiva === 6) {
-                            if (PoderEspiritual >= 150000) {
-                              alert(`A habilidade Manipulação Completa Sobre a Água foi desbloqueada`)
-                            }
-                          } else if (ClasseOfensiva === 7) {
-                            let RepetidorTreinamentoPoder = true;
-                          }
-                          do {
-                            PoderEscolhido = prompt(`Escolha seu local de treinamento
-                    1- Chuveiro (Nivel Requirido: 0)
-                    2- Piscina (Nivel Requirido: 30)
-                    3- Cachoeira (Nivel Requirido: 370)
-                    4- Rio (Nivel Requirido: 3.890)
-                    5- Oceano (Nivel Requirido: 14.980)
-                    6- ${NomeDesconhecido} (Nivel Requirido: 54.769
-                    7- Voltar
-                    Poder Espiritual: ${PoderEspiritual}`);
-
-                            PoderEscolhido = parseInt(PoderEscolhido);
-                            if (
-                              isNaN(PoderEscolhido) ||
-                              PoderEscolhido >= 8 ||
-                              PoderEscolhido <= 0
-                            ) {
-                              alert(`Digite somente números de 1 a 6`);
-                            }
-                            if (PoderEscolhido === 1) {
-                              alert(`Você treinou seu poder de água debaixo do Chuveiro
-                      Você upou 3 níveis`);
-                              PoderEspiritual += 3;
-                            } else if (PoderEscolhido === 2) {
-                              alert(`Você treinou seu poder de água dentro de uma Piscina
-                      Você upou 62 níveis`);
-                              PoderEspiritual += 62;
-                            } else if (PoderEscolhido === 3) {
-                              alert(`Você treinou seu poder de água dentro de uma Cachoeira
-                      Você upou 367 níveis`);
-                              PoderEspiritual += 367;
-                            } else if (PoderEscolhido === 4) {
-                              alert(`Você treinou seu poder de água dentro de um Rio
-                      Você upou 1.479 níveis`);
-                              PoderEspiritual += 1479;
-                            } else if (PoderEscolhido === 5) {
-                              alert(`Você treinou seu poder de água dentro de um Oceano
-                      Você upou 7.937 níveis`);
-                              PoderEspiritual += 7937;
-                            } else if (PoderEscolhido === 6) {
-                              alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
-                      Você upou 31.897 níveis`);
-                              PoderEspiritual += 31897;
-                              NomeDesconhecido = `Fonte De Poder Aquático`;
-                            } else if (PoderEscolhido === 7) {
-                              RepetidorTreinamentoPoder = false;
-                              alert(`Voltando...`);
-                            }
-                          } while (RepetidorTreinamentoPoder === true);
-                        }
-                      } 
+                    if (PoderEscolhido === 1) {
+                      alert(`Você treinou seu poder de água debaixo do Chuveiro
+                    Você upou 3 níveis`);
+                      PoderEspiritual += 3;
+                    } else if (PoderEscolhido === 2) {
+                      alert(`Você treinou seu poder de água dentro de uma Piscina
+                    Você upou 62 níveis`);
+                      PoderEspiritual += 62;
+                    } else if (PoderEscolhido === 3) {
+                      alert(`Você treinou seu poder de água dentro de uma Cachoeira
+                    Você upou 367 níveis`);
+                      PoderEspiritual += 367;
+                    } else if (PoderEscolhido === 4) {
+                      alert(`Você treinou seu poder de água dentro de um Rio
+                    Você upou 1.479 níveis`);
+                      PoderEspiritual += 1479;
+                    } else if (PoderEscolhido === 5) {
+                      alert(`Você treinou seu poder de água dentro de um Oceano
+                    Você upou 7.937 níveis`);
+                      PoderEspiritual += 7937;
+                    } else if (PoderEscolhido === 6) {
+                      alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
+                    Você upou 31.897 níveis`);
+                      PoderEspiritual += 31897;
+                      NomeDesconhecido = `Fonte De Poder Aquático`;
+                    } else if (PoderEscolhido === 7) {
+                      RepetidorTreinamentoPoder = false;
+                      alert(`Voltando...`);
                     }
-                  } while (ClasseRepetidora === true);
-                } else if (Elemento === `Água`) {
-                } else if (Elemento === `Vento`) {
-                } else if (Elemento === `Terra`) {
+                  } while (RepetidorTreinamentoPoder === true);
                 }
-              }while(PoderRepetidor === true)
-            }
-        }while (PoderRepetidor === true);
-      } 
-    
+              } while (PoderRepetidor === true);
+          }
+        } while (PoderRepetidor === true);
+      } else if (Elemento === `Água`) {
+      } else if (Elemento === `Vento`) {
+      } else if (Elemento === `Terra`) {
+      }
     }
-  
   }
-
-} while (Continuar === true)
+} while (Continuar === true);
