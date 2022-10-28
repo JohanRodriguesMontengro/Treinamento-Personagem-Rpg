@@ -424,15 +424,14 @@ do {
                 5- Solidificação De Água (Nível Requirido: 45.000 (${Bloqueadores.BloqueadorEspiritual5}))
                 6- ${NomeDesconhecido} (Nível Requirido: 150.000 (${Bloqueadores.BloqueadorEspiritual6}))
                 7- Treinamento
-                8- Ver Sobre as Habilidades
                 Poder Espiritual: ${PoderEspiritual}`);
                 ClasseOfensiva = parseInt(ClasseOfensiva);
                 if (
                   isNaN(ClasseOfensiva) ||
-                  ClasseOfensiva >= 9 ||
+                  ClasseOfensiva >= 8 ||
                   ClasseOfensiva <= 0
                 ) {
-                  alert(`Digite somente números de 1 a 8`);
+                  alert(`Digite somente números de 1 a 7`);
                 } else if (ClasseOfensiva === 1) {
                   if (PoderEspiritual >= 50) {
                     alert(`A habilidade Hálito De Água foi desbloqueada`);
@@ -554,15 +553,14 @@ do {
                 5- Andar Sobre As Águas (Nível Requirido: 45.000 (${Bloqueadores.BloqueadorEspiritual5}))
                 6- ${NomeDesconhecidoDefensiva} (Nível Requirido: 150.000 (${Bloqueadores.BloqueadorEspiritual6}))
                 7- Treinamento
-                8- Ver Sobre as Habilidades
                 Poder Espiritual: ${PoderEspiritual}`);
                 ClasseDefensiva = parseInt(ClasseDefensiva);
                 if (
                   isNaN(ClasseDefensiva) ||
-                  ClasseDefensiva >= 9 ||
+                  ClasseDefensiva >= 8 ||
                   ClasseDefensiva <= 0
                 ) {
-                  alert(`Digite somente números de 1 a 8`);
+                  alert(`Digite somente números de 1 a 7`);
                 } else if (ClasseDefensiva === 1) {
                   if (PoderEspiritual >= 50) {
                     alert(`A habilidade Hálito De Água foi desbloqueada`);
@@ -682,15 +680,14 @@ do {
                 5- Solidificação De Água (Nível Requirido: 45.000 (${Bloqueadores.BloqueadorEspiritual5}))
                 6- ${NomeDesconhecidoEquilibrada} (Nível Requirido: 150.000 (${Bloqueadores.BloqueadorEspiritual6}))
                 7- Treinamento
-                8- Ver Sobre as Habilidades
                 Poder Espiritual: ${PoderEspiritual}`);
                 ClasseEquilibrada = parseInt(ClasseEquilibrada);
                 if (
                   isNaN(ClasseEquilibrada) ||
-                  ClasseEquilibrada >= 9 ||
+                  ClasseEquilibrada >= 8 ||
                   ClasseEquilibrada <= 0
                 ) {
-                  alert(`Digite somente números de 1 a 8`);
+                  alert(`Digite somente números de 1 a 7`);
                 } else if (ClasseEquilibrada === 1) {
                   if (PoderEspiritual >= 50) {
                     alert(`A habilidade Hálito De Água foi desbloqueada`);
@@ -987,7 +984,7 @@ do {
               let PoderRepetidorFogo = true;
 
               do {
-                ClasseOfensivaFogo = prompt(`Desbloqueie ataques de água
+                ClasseOfensivaFogo = prompt(`Desbloqueie ataques de Fogo
                 1- Hálito de Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
                 2- Criação de Lâmina de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
                 3- Manipulação de Fogo Negro (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
@@ -995,15 +992,14 @@ do {
                 5- Criação de Vórtex de Fogo Negro (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
                 6- ${NomeDesconhecidoFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
                 7- Treinamento
-                8- Ver Sobre as Habilidades
                 Poder Espiritual: ${PoderEspiritual}`);
                 ClasseOfensivaFogo = parseInt(ClasseOfensivaFogo);
                 if (
                   isNaN(ClasseOfensivaFogo) ||
-                  ClasseOfensivaFogo >= 9 ||
+                  ClasseOfensivaFogo >= 8 ||
                   ClasseOfensivaFogo <= 0
                 ) {
-                  alert(`Digite somente números de 1 a 8`);
+                  alert(`Digite somente números de 1 a 7`);
                 } else if (ClasseOfensivaFogo === 1) {
                   if (PoderEspiritual >= 50) {
                     alert(`A habilidade Hálito De Fogo foi desbloqueada`);
@@ -1011,12 +1007,16 @@ do {
                   }
                 } else if (ClasseOfensivaFogo === 2) {
                   if (PoderEspiritual >= 250) {
-                    alert(`A habilidade Criação de Lâmina de Fogo foi desbloqueada`);
+                    alert(
+                      `A habilidade Criação de Lâmina de Fogo foi desbloqueada`
+                    );
                     BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
                   }
                 } else if (ClasseOfensivaFogo === 3) {
                   if (PoderEspiritual >= 2500) {
-                    alert(`A habilidade Manipulação de Fogo Negro foi desbloqueada`);
+                    alert(
+                      `A habilidade Manipulação de Fogo Negro foi desbloqueada`
+                    );
                     BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
                   }
                 } else if (ClasseOfensivaFogo === 4) {
@@ -1104,7 +1104,7 @@ do {
                         alert(`Nível insuficiente`);
                       }
                     } else if (PoderEscolhido === 7) {
-                      RepetidorTreinamentoPoder = false;
+                      RepetidorTreinamentoPoderFogo = false;
                       alert(`Voltando...`);
                     }
                   } while (RepetidorTreinamentoPoderFogo === true);
@@ -1117,7 +1117,7 @@ do {
               let PoderRepetidorDefensivaFogo = true;
 
               do {
-                ClasseDefensivaFogo = prompt(`Desbloqueie ataques de água
+                ClasseDefensivaFogo = prompt(`Desbloqueie ataques de Fogo
                 1- Hálito De Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
                 2- Defesa de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
                 3- Manipulação do Fogo (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
@@ -1125,15 +1125,14 @@ do {
                 5- Geração de Escudo de Fogo (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
                 6- ${NomeDesconhecidoDefensivaFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
                 7- Treinamento
-                8- Ver Sobre as Habilidades
                 Poder Espiritual: ${PoderEspiritual}`);
                 ClasseDefensivaFogo = parseInt(ClasseDefensivaFogo);
                 if (
                   isNaN(ClasseDefensivaFogo) ||
-                  ClasseDefensivaFogo >= 9 ||
+                  ClasseDefensivaFogo >= 8 ||
                   ClasseDefensivaFogo <= 0
                 ) {
-                  alert(`Digite somente números de 1 a 8`);
+                  alert(`Digite somente números de 1 a 7`);
                 } else if (ClasseDefensivaFogo === 1) {
                   if (PoderEspiritual >= 50) {
                     alert(`A habilidade Hálito De Fogo foi desbloqueada`);
@@ -1156,7 +1155,9 @@ do {
                   }
                 } else if (ClasseDefensivaFogo === 5) {
                   if (PoderEspiritual >= 45000) {
-                    alert(`A habilidade Geração De Escudo De Fogo foi desbloqueada`);
+                    alert(
+                      `A habilidade Geração De Escudo De Fogo foi desbloqueada`
+                    );
                     BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
                   }
                 } else if (ClasseDefensivaFogo === 6) {
@@ -1171,13 +1172,13 @@ do {
                   let RepetidorTreinamentoPoderDefensivaFogo = true;
                   do {
                     PoderEscolhido = prompt(`Escolha seu local de treinamento
-                  1- Chuveiro (Nivel Requirido: 0)
-                  2- Piscina (Nivel Requirido: 30)
-                  3- Cachoeira (Nivel Requirido: 370)
-                  4- Rio (Nivel Requirido: 3.890)
-                  5- Oceano (Nivel Requirido: 14.980)
-                  6- Fonte De Poder Aquático (Nivel Requirido: 54.769)
-                  7- Voltar
+                    1- Sauna (Nivel Requirido: 0)
+                    2- Fogueira (Nivel Requirido: 30)
+                    3- Banho De Fogo Puro (Nivel Requirido: 370)
+                    4- Lago De Fogo (Nivel Requirido: 3.890)
+                    5- Piscina De Lava (Nivel Requirido: 14.980)
+                    6- Vulcão (Nivel Requirido: 54.769)
+                    7- Voltar
                   Poder Espiritual: ${PoderEspiritual}`);
                     PoderEscolhido = parseInt(PoderEscolhido);
                     if (
@@ -1188,12 +1189,12 @@ do {
                       alert(`Digite somente números de 1 a 7`);
                     }
                     if (PoderEscolhido === 1) {
-                      alert(`Você treinou seu poder de água debaixo do Chuveiro
+                      alert(`Você treinou seu poder de Fogo dentro de uma Sauna
                     Você upou 3 níveis`);
                       PoderEspiritual += 3;
                     } else if (PoderEscolhido === 2) {
                       if (PoderEspiritual >= 30) {
-                        alert(`Você treinou seu poder de água dentro de uma Piscina
+                        alert(`Você treinou seu poder de Fogo dentro de uma Fogueira
                     Você upou 62 níveis`);
                         PoderEspiritual += 62;
                       } else {
@@ -1201,7 +1202,7 @@ do {
                       }
                     } else if (PoderEscolhido === 3) {
                       if (PoderEspiritual >= 370) {
-                        alert(`Você treinou seu poder de água dentro de uma Cachoeira
+                        alert(`Você treinou seu poder de Fogo dentro de um Banho De Fogo Puro
                     Você upou 367 níveis`);
                         PoderEspiritual += 367;
                       } else {
@@ -1209,7 +1210,7 @@ do {
                       }
                     } else if (PoderEscolhido === 4) {
                       if (PoderEspiritual >= 3890) {
-                        alert(`Você treinou seu poder de água dentro de um Rio
+                        alert(`Você treinou seu poder de Fogo dentro de um Lago De Fogo
                     Você upou 1.479 níveis`);
                         PoderEspiritual += 1479;
                       } else {
@@ -1217,7 +1218,7 @@ do {
                       }
                     } else if (PoderEscolhido === 5) {
                       if (PoderEspiritual >= 14980) {
-                        alert(`Você treinou seu poder de água dentro de um Oceano
+                        alert(`Você treinou seu poder de Fogo dentro de uma Piscina De Lava
                     Você upou 7.937 níveis`);
                         PoderEspiritual += 7937;
                       } else {
@@ -1225,7 +1226,7 @@ do {
                       }
                     } else if (PoderEscolhido === 6) {
                       if (PoderEspiritual >= 54769) {
-                        alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
+                        alert(`Você treinou seu poder de Fogo dentro de um Vulcão
                     Você upou 31.897 níveis`);
                         PoderEspiritual += 31897;
                       } else {
@@ -1240,75 +1241,76 @@ do {
               } while (PoderRepetidorDefensivaFogo === true);
               break;
             case 3:
-              let ClasseEquilibrada = `.`;
-              let NomeDesconhecidoEquilibrada = `???`;
-              let PoderRepetidorEquilibrada = true;
+              let ClasseEquilibradaFogo = `.`;
+              let NomeDesconhecidoEquilibradaFogo = `???`;
+              let PoderRepetidorEquilibradaFogo = true;
 
               do {
-                ClasseEquilibrada = prompt(`Desbloqueie ataques de água
-                1- Hálito De Água (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
-                2- Defesa Aquacinética (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
-                3- Amplificação De Água (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
-                4- Exoesqueleto De Água (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
-                5- Solidificação De Água (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
-                6- ${NomeDesconhecidoEquilibrada} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
+                ClasseEquilibradaFogo = prompt(`Desbloqueie ataques de Fogo
+                1- Hálito De Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
+                2- Defesa de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
+                3- Manipulação De Fogo Negro (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
+                4- Exoesqueleto De Fogo (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
+                5- Solidificação De Fogo (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
+                6- ${NomeDesconhecidoEquilibradaFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
                 7- Treinamento
-                8- Ver Sobre as Habilidades
                 Poder Espiritual: ${PoderEspiritual}`);
-                ClasseEquilibrada = parseInt(ClasseEquilibrada);
+                ClasseEquilibradaFogo = parseInt(ClasseEquilibradaFogo);
                 if (
-                  isNaN(ClasseEquilibrada) ||
-                  ClasseEquilibrada >= 9 ||
-                  ClasseEquilibrada <= 0
+                  isNaN(ClasseEquilibradaFogo) ||
+                  ClasseEquilibradaFogo >= 8 ||
+                  ClasseEquilibradaFogo <= 0
                 ) {
-                  alert(`Digite somente números de 1 a 8`);
-                } else if (ClasseEquilibrada === 1) {
+                  alert(`Digite somente números de 1 a 7`);
+                } else if (ClasseEquilibradaFogo === 1) {
                   if (PoderEspiritual >= 50) {
-                    alert(`A habilidade Hálito De Água foi desbloqueada`);
-                    Bloqueadores.BloqueadorEspiritual1 = `Desbloqueado`;
+                    alert(`A habilidade Hálito De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo1 = `Desbloqueado`;
                   }
-                } else if (ClasseEquilibrada === 2) {
+                } else if (ClasseEquilibradaFogo === 2) {
                   if (PoderEspiritual >= 250) {
-                    alert(`A habilidade Defesa Aquacinética foi desbloqueada`);
-                    Bloqueadores.BloqueadorEspiritual2 = `Desbloqueado`;
+                    alert(`A habilidade Defesa De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
                   }
-                } else if (ClasseEquilibrada === 3) {
+                } else if (ClasseEquilibradaFogo === 3) {
                   if (PoderEspiritual >= 2500) {
-                    alert(`A habilidade Amplificação De Água foi desbloqueada`);
-                    Bloqueadores.BloqueadorEspiritual3 = `Desbloqueado`;
+                    alert(
+                      `A habilidade Manipulação De Fogo Negro foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
                   }
-                } else if (ClasseEquilibrada === 4) {
+                } else if (ClasseEquilibradaFogo === 4) {
                   if (PoderEspiritual >= 7500) {
-                    alert(`A habilidade Exoesqueleto De Água foi desbloqueada`);
-                    Bloqueadores.BloqueadorEspiritual4 = `Desbloqueado`;
+                    alert(`A habilidade Exoesqueleto De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo4 = `Desbloqueado`;
                   }
-                } else if (ClasseEquilibrada === 5) {
+                } else if (ClasseEquilibradaFogo === 5) {
                   if (PoderEspiritual >= 45000) {
                     alert(
-                      `A habilidade Solidificação De Água foi desbloqueada`
+                      `A habilidade Solidificação De Fogo foi desbloqueada`
                     );
-                    Bloqueadores.BloqueadorEspiritual5 = `Desbloqueado`;
+                    BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
                   }
-                } else if (ClasseEquilibrada === 6) {
+                } else if (ClasseEquilibradaFogo === 6) {
                   if (PoderEspiritual >= 150000) {
                     alert(
-                      `A habilidade Ataque Supremo Do Rei Dos Mares foi desbloqueada`
+                      `A habilidade Manipulação Completa Sobre o Fogo foi desbloqueada`
                     );
-                    Bloqueadores.BloqueadorEspiritual6 = `Desbloqueado`;
-                    NomeDesconhecidoEquilibrada = `Ataque Supremo Do Rei Dos Mares`;
+                    BloqueadoresFogo.BloqueadorEspiritualFogo6 = `Desbloqueado`;
+                    NomeDesconhecidoEquilibradaFogo = `Manipulação Completa Sobre o Fogo`;
                   }
-                } else if (ClasseEquilibrada === 7) {
-                  let RepetidorTreinamentoPoderEquilibrada = true;
+                } else if (ClasseEquilibradaFogo === 7) {
+                  let RepetidorTreinamentoPoderEquilibradaFogo = true;
                   do {
                     PoderEscolhido = prompt(`Escolha seu local de treinamento
-                  1- Chuveiro (Nivel Requirido: 0)
-                  2- Piscina (Nivel Requirido: 30)
-                  3- Cachoeira (Nivel Requirido: 370)
-                  4- Rio (Nivel Requirido: 3.890)
-                  5- Oceano (Nivel Requirido: 14.980)
-                  6- Fonte De Poder Aquático (Nivel Requirido: 54.769)
-                  7- Voltar
-                  Poder Espiritual: ${PoderEspiritual}`);
+                    1- Sauna (Nivel Requirido: 0)
+                    2- Fogueira (Nivel Requirido: 30)
+                    3- Banho De Fogo Puro (Nivel Requirido: 370)
+                    4- Lago De Fogo (Nivel Requirido: 3.890)
+                    5- Piscina De Lava (Nivel Requirido: 14.980)
+                    6- Vulcão (Nivel Requirido: 54.769)
+                    7- Voltar
+                    Poder Espiritual: ${PoderEspiritual}`);
                     PoderEscolhido = parseInt(PoderEscolhido);
                     if (
                       isNaN(PoderEscolhido) ||
@@ -1318,62 +1320,62 @@ do {
                       alert(`Digite somente números de 1 a 7`);
                     }
                     if (PoderEscolhido === 1) {
-                      alert(`Você treinou seu poder de água debaixo do Chuveiro
-                    Você upou 3 níveis`);
+                      alert(`Você treinou seu poder de Fogo dentro de uma Sauna
+                      Você upou 3 níveis`);
                       PoderEspiritual += 3;
                     } else if (PoderEscolhido === 2) {
                       if (PoderEspiritual >= 30) {
-                        alert(`Você treinou seu poder de água dentro de uma Piscina
-                    Você upou 62 níveis`);
+                        alert(`Você treinou seu poder de Fogo dentro de uma Fogueira
+                      Você upou 62 níveis`);
                         PoderEspiritual += 62;
                       } else {
                         alert(`Nível insuficiente`);
                       }
                     } else if (PoderEscolhido === 3) {
                       if (PoderEspiritual >= 370) {
-                        alert(`Você treinou seu poder de água dentro de uma Cachoeira
-                    Você upou 367 níveis`);
+                        alert(`Você treinou seu poder de Fogo dentro de um Banho De Fogo Puro
+                      Você upou 367 níveis`);
                         PoderEspiritual += 367;
                       } else {
                         alert(`Nível insuficiente`);
                       }
                     } else if (PoderEscolhido === 4) {
                       if (PoderEspiritual >= 3890) {
-                        alert(`Você treinou seu poder de água dentro de um Rio
-                    Você upou 1.479 níveis`);
+                        alert(`Você treinou seu poder de Fogo dentro de um Lago De Fogo
+                      Você upou 1.479 níveis`);
                         PoderEspiritual += 1479;
                       } else {
                         alert(`Nível insuficiente`);
                       }
                     } else if (PoderEscolhido === 5) {
                       if (PoderEspiritual >= 14980) {
-                        alert(`Você treinou seu poder de água dentro de um Oceano
-                    Você upou 7.937 níveis`);
+                        alert(`Você treinou seu poder de Fogo dentro de uma Piscina De Lava
+                      Você upou 7.937 níveis`);
                         PoderEspiritual += 7937;
                       } else {
                         alert(`Nível insuficiente`);
                       }
                     } else if (PoderEscolhido === 6) {
                       if (PoderEspiritual >= 54769) {
-                        alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
-                    Você upou 31.897 níveis`);
+                        alert(`Você treinou seu poder de Fogo dentro de um Vulcão
+                      Você upou 31.897 níveis`);
                         PoderEspiritual += 31897;
                       } else {
                         alert(`Nível insuficiente`);
                       }
                     } else if (PoderEscolhido === 7) {
-                      RepetidorTreinamentoPoderEquilibrada = false;
+                      RepetidorTreinamentoPoderEquilibradaFogo = false;
                       alert(`Voltando...`);
                     }
-                  } while (RepetidorTreinamentoPoderEquilibrada === true);
+                  } while (RepetidorTreinamentoPoderEquilibradaFogo === true);
                 }
-              } while (PoderRepetidorEquilibrada === true);
+              } while (PoderRepetidorEquilibradaFogo === true);
               break;
             case 4:
-              Classes = ``;
-              let ClassesRepetidor = true;
-              let InformacoesClasses = ``;
-              let HabilidadeDesconhecida;
+              ClassesFogo = ``;
+              let ClassesRepetidorFogo = true;
+              let InformacoesClassesFogo = ``;
+              let HabilidadeDesconhecidaFogo;
               do {
                 let Classes = prompt(`Qual classe gostaria de saber sobre?
                 1- Ofensiva
@@ -1381,145 +1383,143 @@ do {
                 3- Equilíbrio
                 4- Voltar`);
 
-                if (isNaN(Classes) || Classes >= 5 || Classes <= 0) {
+                if (isNaN(ClassesFogo) || ClassesFogo >= 5 || ClassesFogo <= 0) {
                   alert(`Digite somente números entre 1 a 4`);
-                } else if (Classes === 1) {
-                  let Repetidor = true;
+                } else if (ClassesFogo === 1) {
+                  let RepetidorFogo = true;
                   do {
-                    InformacoesClasses = prompt(`
-                  1- Hálito De Água (Nível Requirido: 50)
-                2- Adaptação Aquática (Nível Requirido: 250)
-                3- Amplificação De Água (Nível Requirido: 2.500)
-                4- Andar Sobre a Água (Nível Requirido: 7.500)
-                5- Solidificação De Água (Nível Requirido: 45.000)
-                6- ${HabilidadeDesconhecida} (Nível Requirido: 150.000)
-                `);
-                    InformacoesClasses = parseInt(InformacoesClasses);
+                    InformacoesClassesFogo = prompt(`
+                    1- Hálito de Fogo (Nível Requirido: 50 )
+                    2- Criação de Lâmina de Fogo (Nível Requirido: 250 )
+                    3- Manipulação de Fogo Negro (Nível Requirido: 2.500)
+                    4- Corte de Fogo (Nível Requirido: 7.500 )
+                    5- Criação de Vórtex de Fogo Negro (Nível Requirido: 45.000 )
+                    6- ${NomeDesconhecidoFogo} (Nível Requirido: 150.000 )
+                    `);
+                    InformacoesClassesFogo = parseInt(InformacoesClassesFogo);
                     if (
-                      isNaN(InformacoesClasses) ||
-                      InformacoesClasses >= 7 ||
-                      InformacoesClasses <= 0
+                      isNaN(InformacoesClassesFogo) ||
+                      InformacoesClassesFogo >= 7 ||
+                      InformacoesClassesFogo <= 0
                     ) {
                       alert(`Digite somente números entre 1 a 6`);
-                    } else if (InformacoesClasses === 1) {
+                    } else if (InformacoesClassesFogo === 1) {
                       alert(
-                        `O usuário é capaz de gerar água dentro deles de uma maneira que lhes permita moldar a expiração do efeito. Essas formas podem incluir rajadas, correntes, esferas e até uma névoa da boca.`
+                        `Hálito de Fogo é o poder de gerar e disparar fogo através da boca. É uma técnica da Manipulação do Fogo, bem como uma variação do Hálito Elemental e do Hálito de Calor. Oposto ao Hálito de Água e ao Hálito de Gelo.`
                       );
-                    } else if (InformacoesClasses === 2) {
+                    } else if (InformacoesClassesFogo === 2) {
                       alert(
-                        `O usuário é capaz de sobreviver plenamente e ter sua fisiologia adaptada a ambientes subaquáticos, sendo capaz de permanecer submerso tão confortavelmente quanto qualquer ser marinho, com capacidades como a de respirar debaixo d'água, nadar a velocidades maiores que a de um ser humano comum e até mesmo resistir à alta pressão submarina e a águas em temperaturas extremas. Além disso, ele possui sentidos perfeitamente funcionais, sem que a distorção da água os atrapalhe, podendo, por exemplo, ignorar impurezas que normalmente reduziriam sua visibilidade.O usuário tem o poder de aumentar as quantidades da água e todos os poderes e aspectos relacionados ao elemento água, potenciando ao ponto de causar grandes barreiras de água, ondas, correntes de água, etc.`
+                        `O usuário pode construir lâminas de várias formas e tamanhos de fogo. Algumas lâminas são uma mera faísca instantânea de atrito, enquanto outras podem durar para sempre, dependendo da habilidade do usuário. As chamas podem aumentar a borda de corte usando alta temperatura para derreter e incinerar o alvo.`
                       );
-                    } else if (InformacoesClasses === 3) {
+                    } else if (InformacoesClassesFogo === 3) {
                       alert(
-                        `O  usuário tem o poder de aumentar as quantidades da água e todos os poderes e aspectos relacionados ao elemento água, potenciando ao ponto de causar grandes barreiras de água, ondas, correntes de água, etc.`
+                        `O usuário é capaz de gerar, manipular e moldar um tipo de fogo que possui uma natureza sombria, como se fosse uma espécie de "lado negativo" do fogo. Esse tipo de chama, além de possuir quase as mesmas capacidades do fogo comum, possui algumas particularidades: Além de possuírem mais poder destrutivo do que o fogo comum, as chamas negras não podem ser apagadas por meios comuns, como o uso de água ou gelo. Elas também possuem uma propriedade anti-regenerativa que impede que alvos afetados pelas mesmas se recuperem de danos, o que, em alguns casos, pode afetar até mesmo seres com regeneração alta e imortais. Em essência, trata-se apenas de controlar os poderes negativos do fogo.`
                       );
-                    } else if (InformacoesClasses === 4) {
+                    } else if (InformacoesClassesFogo === 4) {
                       alert(
-                        `de andar na superfície da água. Pode ser obtida pela Super Velocidade. O usuário é capaz de andar, correr e ficar parado na superfície da água, o fazendo como se a mesma estivesse em estado`
+                        `O usuário pode liberar e utilizar fogo para realizar ataques, como lançar rajadas de fogo ou gerar explosões de chamas intensas que consumam tudo ao seu redor.`
                       );
-                    } else if (InformacoesClasses === 5) {
+                    } else if (InformacoesClassesFogo === 5) {
                       alert(
-                        `O usuário é capaz de solidificar a água como uma rocha extremamente resistente`
+                        `O usuário pode gerar espirais/vórtices compostos por fogo. O vórtice pode ser projetado como um ataque de longo alcance ou como um tornado de chamas para fins ofensivos e/ou defensivos.`
                       );
-                    } else if (InformacoesClasses === 6) {
+                    } else if (InformacoesClassesFogo === 6) {
                       alert(
                         `Essa habilidade é secreta, treine para ela ser descoberta`
                       );
                     }
-                  } while (Repetidor === true);
-                } else if (Classes === 2) {
-                  let Repetidor = true;
+                  } while (RepetidorFogo === true);
+                } else if (ClassesFogo === 2) {
+                  let RepetidorFogo = true;
                   do {
-                    InformacoesClasses = prompt(`
-                    1- Hálito De Água (Nível Requirido: 50)
-                    2- Defesa Aquacinética (Nível Requirido: 250)
-                    3- Defesa Hidrocinética (Nível Requirido: 2.500)
-                    4- Exoesqueleto De Água (Nível Requirido: 7.500)
-                    5- Andar Sobre As Águas (Nível Requirido: 45.000)
-                    6- ${NomeDesconhecidoDefensiva} (Nível Requirido: 150.000)
+                    InformacoesClassesFogo = prompt(`
+                    1- Hálito De Fogo (Nível Requirido: 50)
+                2- Defesa de Fogo (Nível Requirido: 250)
+                3- Manipulação do Fogo (Nível Requirido: 2.500)
+                4- Exoesqueleto de Fogo (Nível Requirido: 7.500)
+                5- Geração de Escudo de Fogo (Nível Requirido: 45.000)
+                6- ${NomeDesconhecidoDefensivaFogo} (Nível Requirido: 150.000)
                 `);
-                    InformacoesClasses = parseInt(InformacoesClasses);
+                    InformacoesClassesFogo = parseInt(InformacoesClassesFogo);
                     if (
-                      isNaN(InformacoesClasses) ||
-                      InformacoesClasses >= 7 ||
-                      InformacoesClasses <= 0
+                      isNaN(InformacoesClassesFogo) ||
+                      InformacoesClassesFogo >= 7 ||
+                      InformacoesClassesFogo <= 0
                     ) {
                       alert(`Digite somente números entre 1 a 6`);
-                    } else if (InformacoesClasses === 1) {
+                    } else if (InformacoesClassesFogo === 1) {
                       alert(
-                        `O usuário é capaz de gerar água dentro deles de uma maneira que lhes permita moldar a expiração do efeito. Essas formas podem incluir rajadas, correntes, esferas e até uma névoa da boca.`
+                        `Hálito de Fogo é o poder de gerar e disparar fogo através da boca. É uma técnica da Manipulação do Fogo, bem como uma variação do Hálito Elemental e do Hálito de Calor. Oposto ao Hálito de Água e ao Hálito de Gelo.`
                       );
-                    } else if (InformacoesClasses === 2) {
+                    } else if (InformacoesClassesFogo === 2) {
                       alert(
-                        `O usuário é capaz de moldar a água e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
+                        `O usuário pode utilizar fogo de várias formas diferentes para defender a si mesmo, ou a outros seres/objetos.`
                       );
-                    } else if (InformacoesClasses === 3) {
+                    } else if (InformacoesClassesFogo === 3) {
                       alert(
-                        `O usuário é capaz de moldar a água e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
+                        `O usuário é capaz de moldar a fogo e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
                       );
-                    } else if (InformacoesClasses === 4) {
+                    } else if (InformacoesClassesFogo === 4) {
                       alert(
-                        `O usuário possui a capacidade de formar uma espécie de armadura feita de água à volta do próprio corpo para proteção ou para melhorar a condição física. Com treino, o usuário pode manipular a armadura para formar construtos ou usá-la para teletransporte.`
+                        `O usuário possui a capacidade de formar uma espécie de armadura feita de fogo à volta do próprio corpo para proteção ou para melhorar a condição física. Com treino, o usuário pode manipular a armadura para formar construtos ou usá-la para teletransporte.`
                       );
-                    } else if (InformacoesClasses === 5) {
-                      alert(`O usuário é capaz de andar, correr e ficar parado na superfície da água, o fazendo como se a mesma estivesse em estado sólido.
-
-                      A caminhada pela superfície hídrica pode ser obtida também quando se atinge altas velocidades. Por isso, quando estes tipos de usuários a utilizam não podem diminuir sua velocidade ou parar de correr.`);
-                    } else if (InformacoesClasses === 6) {
+                    } else if (InformacoesClassesFogo === 5) {
+                      alert(`O usuário pode se defender a si mesmo ou a outros utilizando fogo. É um sub-poder da Manipulação do Fogo, bem como uma variação da Defesa Elemental. É oposto aos Ataques de Fogo. Não deve ser confundido com Escudo de Chamas.`);
+                    } else if (InformacoesClassesFogo === 6) {
                       alert(
                         `Essa habilidade é secreta, treine para ela ser descoberta`
                       );
                     }
-                  } while (Repetidor === true);
-                } else if (Classes === 3) {
-                  let Repetidor = true;
+                  } while (RepetidorFogo === true);
+                } else if (ClassesFogo === 3) {
+                  let RepetidorFogo = true;
                   do {
-                    InformacoesClasses = prompt(`
-                    1- Hálito De Água (Nível Requirido: 50)
-                2- Defesa Aquacinética (Nível Requirido: 250)
-                3- Amplificação De Água (Nível Requirido: 2.500)
-                4- Exoesqueleto De Água (Nível Requirido: 7.500)
-                5- Solidificação De Água (Nível Requirido: 45.000)
-                6- ${NomeDesconhecidoEquilibrada} (Nível Requirido: 150.000)
+                    InformacoesClassesFogo = prompt(`
+                    1- Hálito De Fogo (Nível Requirido: 50)
+                2- Defesa de Fogo (Nível Requirido: 250)
+                3- Manipulação De Fogo Negro (Nível Requirido: 2.500)
+                4- Exoesqueleto De Fogo (Nível Requirido: 7.500)
+                5- Solidificação De Fogo (Nível Requirido: 45.000)
+                6- ${NomeDesconhecidoEquilibradaFogo} (Nível Requirido: 150.000)
                 `);
-                    InformacoesClasses = parseInt(InformacoesClasses);
+                    InformacoesClassesFogo = parseInt(InformacoesClassesFogo);
                     if (
-                      isNaN(InformacoesClasses) ||
-                      InformacoesClasses >= 7 ||
-                      InformacoesClasses <= 0
+                      isNaN(InformacoesClassesFogo) ||
+                      InformacoesClassesFogo >= 7 ||
+                      InformacoesClassesFogo <= 0
                     ) {
                       alert(`Digite somente números entre 1 a 6`);
-                    } else if (InformacoesClasses === 1) {
+                    } else if (InformacoesClassesFogo === 1) {
                       alert(
-                        `O usuário é capaz de gerar água dentro deles de uma maneira que lhes permita moldar a expiração do efeito. Essas formas podem incluir rajadas, correntes, esferas e até uma névoa da boca.`
+                        `Hálito de Fogo é o poder de gerar e disparar fogo através da boca. É uma técnica da Manipulação do Fogo, bem como uma variação do Hálito Elemental e do Hálito de Calor. Oposto ao Hálito de Água e ao Hálito de Gelo.`
                       );
-                    } else if (InformacoesClasses === 2) {
+                    } else if (InformacoesClassesFogo === 2) {
                       alert(
-                        `O usuário é capaz de moldar a água e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
+                        `O usuário pode utilizar fogo de várias formas diferentes para defender a si mesmo, ou a outros seres/objetos.`
                       );
-                    } else if (InformacoesClasses === 3) {
+                    } else if (InformacoesClassesFogo === 3) {
                       alert(
-                        `O usuário é capaz de moldar a água e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
+                        `O usuário é capaz de moldar a fogo e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
                       );
-                    } else if (InformacoesClasses === 4) {
+                    } else if (InformacoesClassesFogo === 4) {
                       alert(
-                        `O usuário possui a capacidade de formar uma espécie de armadura feita de água à volta do próprio corpo para proteção ou para melhorar a condição física. Com treino, o usuário pode manipular a armadura para formar construtos ou usá-la para teletransporte.`
+                        `O usuário possui a capacidade de formar uma espécie de armadura feita de fogo à volta do próprio corpo para proteção ou para melhorar a condição física. Com treino, o usuário pode manipular a armadura para formar construtos ou usá-la para teletransporte.`
                       );
-                    } else if (InformacoesClasses === 5) {
+                    } else if (InformacoesClassesFogo === 5) {
                       alert(
-                        `O usuário é capaz de solidificar a água como uma rocha extremamente resistente`
+                        `O usuário é capaz de solidificar o fogo como uma rocha extremamente resistente`
                       );
-                    } else if (InformacoesClasses === 6) {
+                    } else if (InformacoesClassesFogo === 6) {
                       alert(
                         `Essa habilidade é secreta, treine para ela ser descoberta`
                       );
                     }
-                  } while (Repetidor === true);
-                } else if (Classes === 4) {
+                  } while (RepetidorFogo === true);
+                } else if (ClassesFogo === 4) {
                   alert(`Voltando...`);
-                  ClassesRepetidor = false;
+                  ClassesRepetidorFogo = false;
                 }
-              } while (ClassesRepetidor === true);
+              } while (ClassesRepetidorFogo === true);
           }
         } while (ClasseRepetidoraFogo === true);
       } else if (Elemento === `Vento`) {
@@ -1529,4 +1529,4 @@ do {
   }
 } while (Continuar === true);
 
-// Modificar as frases so Elemento Fogo!!
+// terminar o case 4 do elemento de fogo e água
