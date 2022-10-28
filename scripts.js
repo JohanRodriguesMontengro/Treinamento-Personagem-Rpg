@@ -988,12 +988,12 @@ do {
 
               do {
                 ClasseOfensivaFogo = prompt(`Desbloqueie ataques de água
-                1- Hálito De Água (Nível Requirido: 50 (${Bloqueadores.BloqueadorEspiritual1}))
-                2- Adaptação Aquática (Nível Requirido: 250 (${Bloqueadores.BloqueadorEspiritual2}))
-                3- Amplificação De Água (Nível Requirido: 2.500 (${Bloqueadores.BloqueadorEspiritual3}))
-                4- Andar Sobre a Água (Nível Requirido: 7.500 (${Bloqueadores.BloqueadorEspiritual4}))
-                5- Solidificação De Água (Nível Requirido: 45.000 (${Bloqueadores.BloqueadorEspiritual5}))
-                6- ${NomeDesconhecidoFogo} (Nível Requirido: 150.000 (${Bloqueadores.BloqueadorEspiritual6}))
+                1- Hálito de Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
+                2- Criação de Lâmina de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
+                3- Manipulação de Fogo Negro (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
+                4- Corte de Fogo (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
+                5- Criação de Vórtex de Fogo Negro (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
+                6- ${NomeDesconhecidoFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
                 7- Treinamento
                 8- Ver Sobre as Habilidades
                 Poder Espiritual: ${PoderEspiritual}`);
@@ -1006,28 +1006,28 @@ do {
                   alert(`Digite somente números de 1 a 8`);
                 } else if (ClasseOfensivaFogo === 1) {
                   if (PoderEspiritual >= 50) {
-                    alert(`A habilidade Hálito De Água foi desbloqueada`);
-                    Bloqueadores.BloqueadorEspiritual1 = `Desbloqueado`;
+                    alert(`A habilidade Hálito De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo1 = `Desbloqueado`;
                   }
                 } else if (ClasseOfensivaFogo === 2) {
                   if (PoderEspiritual >= 250) {
-                    alert(`A habilidade Adaptação Aquática foi desbloqueada`);
-                    Bloqueadores.BloqueadorEspiritual2 = `Desbloqueado`;
+                    alert(`A habilidade Criação de Lâmina de Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
                   }
                 } else if (ClasseOfensivaFogo === 3) {
                   if (PoderEspiritual >= 2500) {
-                    alert(`A habilidade Amplificação De Água foi desbloqueada`);
-                    Bloqueadores.BloqueadorEspiritual3 = `Desbloqueado`;
+                    alert(`A habilidade Manipulação de Fogo Negro foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
                   }
                 } else if (ClasseOfensivaFogo === 4) {
                   if (PoderEspiritual >= 7500) {
-                    alert(`A habilidade Andar Sobre a Água foi desbloqueada`);
-                    Bloqueadores.BloqueadorEspiritual4 = `Desbloqueado`;
+                    alert(`A habilidade Corte De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo4 = `Desbloqueado`;
                   }
                 } else if (ClasseOfensivaFogo === 5) {
                   if (PoderEspiritual >= 45000) {
                     alert(
-                      `A habilidade Solidificação De Água foi desbloqueada`
+                      `A habilidade Criação de Vórtex de Fogo Negro foi desbloqueada`
                     );
                     BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
                   }
@@ -1037,18 +1037,18 @@ do {
                       `A habilidade Manipulação Completa Sobre a Água foi desbloqueada`
                     );
                     BloqueadoresFogo.BloqueadorEspiritualFogo6 = `Desbloqueado`;
-                    NomeDesconhecidoFogo = `Manipulação Completa Sobre a Água`;
+                    NomeDesconhecidoFogo = `Amaterasu`;
                   }
                 } else if (ClasseOfensivaFogo === 7) {
                   let RepetidorTreinamentoPoderFogo = true;
                   do {
                     PoderEscolhido = prompt(`Escolha seu local de treinamento
-                  1- Chuveiro (Nivel Requirido: 0)
-                  2- Piscina (Nivel Requirido: 30)
-                  3- Cachoeira (Nivel Requirido: 370)
-                  4- Rio (Nivel Requirido: 3.890)
-                  5- Oceano (Nivel Requirido: 14.980)
-                  6- Fonte De Poder Aquático (Nivel Requirido: 54.769)
+                  1- Sauna (Nivel Requirido: 0)
+                  2- Fogueira (Nivel Requirido: 30)
+                  3- Banho De Fogo Puro (Nivel Requirido: 370)
+                  4- Lago De Fogo (Nivel Requirido: 3.890)
+                  5- Piscina De Lava (Nivel Requirido: 14.980)
+                  6- Vulcão (Nivel Requirido: 54.769)
                   7- Voltar
                   Poder Espiritual: ${PoderEspiritual}`);
                     PoderEscolhido = parseInt(PoderEscolhido);
@@ -1060,12 +1060,12 @@ do {
                       alert(`Digite somente números de 1 a 7`);
                     }
                     if (PoderEscolhido === 1) {
-                      alert(`Você treinou seu poder de água debaixo do Chuveiro
+                      alert(`Você treinou seu poder de Fogo dentro de uma Sauna
                     Você upou 3 níveis`);
                       PoderEspiritual += 3;
                     } else if (PoderEscolhido === 2) {
                       if (PoderEspiritual >= 30) {
-                        alert(`Você treinou seu poder de água dentro de uma Piscina
+                        alert(`Você treinou seu poder de Fogo dentro de uma Fogueira
                     Você upou 62 níveis`);
                         PoderEspiritual += 62;
                       } else {
@@ -1073,7 +1073,7 @@ do {
                       }
                     } else if (PoderEscolhido === 3) {
                       if (PoderEspiritual >= 370) {
-                        alert(`Você treinou seu poder de água dentro de uma Cachoeira
+                        alert(`Você treinou seu poder de Fogo dentro de um Banho De Fogo Puro
                     Você upou 367 níveis`);
                         PoderEspiritual += 367;
                       } else {
@@ -1081,7 +1081,7 @@ do {
                       }
                     } else if (PoderEscolhido === 4) {
                       if (PoderEspiritual >= 3890) {
-                        alert(`Você treinou seu poder de água dentro de um Rio
+                        alert(`Você treinou seu poder de Fogo dentro de um Lago De Fogo
                     Você upou 1.479 níveis`);
                         PoderEspiritual += 1479;
                       } else {
@@ -1089,7 +1089,7 @@ do {
                       }
                     } else if (PoderEscolhido === 5) {
                       if (PoderEspiritual >= 14980) {
-                        alert(`Você treinou seu poder de água dentro de um Oceano
+                        alert(`Você treinou seu poder de Fogo dentro de uma Piscina De Lava
                     Você upou 7.937 níveis`);
                         PoderEspiritual += 7937;
                       } else {
@@ -1097,7 +1097,7 @@ do {
                       }
                     } else if (PoderEscolhido === 6) {
                       if (PoderEspiritual >= 54769) {
-                        alert(`Você treinou seu poder de água dentro da Fonte De Poder Aquático
+                        alert(`Você treinou seu poder de Fogo dentro de um Vulcão
                     Você upou 31.897 níveis`);
                         PoderEspiritual += 31897;
                       } else {
@@ -1118,11 +1118,11 @@ do {
 
               do {
                 ClasseDefensivaFogo = prompt(`Desbloqueie ataques de água
-                1- Hálito De Água (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
-                2- Defesa Aquacinética (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
-                3- Defesa Hidrocinética (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
-                4- Exoesqueleto De Água (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
-                5- Andar Sobre As Águas (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
+                1- Hálito De Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
+                2- Defesa de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
+                3- Manipulação do Fogo (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
+                4- Exoesqueleto de Fogo (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
+                5- Geração de Escudo de Fogo (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
                 6- ${NomeDesconhecidoDefensivaFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
                 7- Treinamento
                 8- Ver Sobre as Habilidades
@@ -1136,36 +1136,36 @@ do {
                   alert(`Digite somente números de 1 a 8`);
                 } else if (ClasseDefensivaFogo === 1) {
                   if (PoderEspiritual >= 50) {
-                    alert(`A habilidade Hálito De Água foi desbloqueada`);
+                    alert(`A habilidade Hálito De Fogo foi desbloqueada`);
                     BloqueadoresFogo.BloqueadorEspiritualFogo1 = `Desbloqueado`;
                   }
                 } else if (ClasseDefensivaFogo === 2) {
                   if (PoderEspiritual >= 250) {
-                    alert(`A habilidade Defesa Aquacinética foi desbloqueada`);
+                    alert(`A habilidade Defesa De Fogo foi desbloqueada`);
                     BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
                   }
                 } else if (ClasseDefensivaFogo === 3) {
                   if (PoderEspiritual >= 2500) {
-                    alert(`A habilidade Defesa Hidrocinética foi desbloqueada`);
+                    alert(`A habilidade Manipulação Do Fogo foi desbloqueada`);
                     BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
                   }
                 } else if (ClasseDefensivaFogo === 4) {
                   if (PoderEspiritual >= 7500) {
-                    alert(`A habilidade Exoesqueleto De Água foi desbloqueada`);
+                    alert(`A habilidade Exoesqueleto De Fogo foi desbloqueada`);
                     BloqueadoresFogo.BloqueadorEspiritualFogo4 = `Desbloqueado`;
                   }
                 } else if (ClasseDefensivaFogo === 5) {
                   if (PoderEspiritual >= 45000) {
-                    alert(`A habilidade Andar Sobre As Águas foi desbloqueada`);
+                    alert(`A habilidade Geração De Escudo De Fogo foi desbloqueada`);
                     BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
                   }
                 } else if (ClasseDefensivaFogo === 6) {
                   if (PoderEspiritual >= 150000) {
                     alert(
-                      `A habilidade Criação Divina da Parede Aquática foi desbloqueada`
+                      `A habilidade Criação Divina da Parede Pirocinética foi desbloqueada`
                     );
                     BloqueadoresFogo.BloqueadorEspiritualFogo6 = `Desbloqueado`;
-                    NomeDesconhecidoDefensivaFogo = `Criação Divina da Parede Aquática`;
+                    NomeDesconhecidoDefensivaFogo = `Criação Divina da Parede Pirocinética`;
                   }
                 } else if (ClasseDefensivaFogo === 7) {
                   let RepetidorTreinamentoPoderDefensivaFogo = true;
