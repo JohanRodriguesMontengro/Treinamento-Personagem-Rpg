@@ -1523,7 +1523,1153 @@ do {
           }
         } while (ClasseRepetidoraFogo === true);
       } else if (Elemento === `Vento`) {
+        let ClasseEscolhidaFogo = ``;
+        let ClasseRepetidoraFogo = true;
+        let BloqueadoresFogo = {
+          BloqueadorEspiritualFogo1: `Bloqueado`,
+          BloqueadorEspiritualFogo2: `Bloqueado`,
+          BloqueadorEspiritualFogo3: `Bloqueado`,
+          BloqueadorEspiritualFogo4: `Bloqueado`,
+          BloqueadorEspiritualFogo5: `Bloqueado`,
+          BloqueadorEspiritualFogo6: `Bloqueado`
+        };
+
+        do {
+          ClasseEscolhidaFogo = prompt(`Escolha sua classe
+          1- Ofensiva
+          2- Defensiva
+          3- Equilíbrio
+          4- Ver Sobre As Classes`);
+
+          ClasseEscolhidaFogo = parseInt(ClasseEscolhidaFogo);
+
+          if (
+            isNaN(ClasseEscolhidaFogo) ||
+            ClasseEscolhidaFogo >= 5 ||
+            ClasseEscolhidaFogo <= 0
+          ) {
+            alert(`Digite somente números de 1 a 4`);
+          }
+
+          switch (ClasseEscolhidaFogo) {
+            case 1:
+              let ClasseOfensivaFogo = `.`;
+              let NomeDesconhecidoFogo = `???`;
+              let PoderRepetidorFogo = true;
+
+              do {
+                ClasseOfensivaFogo = prompt(`Desbloqueie ataques de Fogo
+                1- Hálito de Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
+                2- Criação de Lâmina de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
+                3- Manipulação de Fogo Negro (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
+                4- Corte de Fogo (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
+                5- Criação de Vórtex de Fogo Negro (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
+                6- ${NomeDesconhecidoFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
+                7- Treinamento
+                Poder Espiritual: ${PoderEspiritual}`);
+                ClasseOfensivaFogo = parseInt(ClasseOfensivaFogo);
+                if (
+                  isNaN(ClasseOfensivaFogo) ||
+                  ClasseOfensivaFogo >= 8 ||
+                  ClasseOfensivaFogo <= 0
+                ) {
+                  alert(`Digite somente números de 1 a 7`);
+                } else if (ClasseOfensivaFogo === 1) {
+                  if (PoderEspiritual >= 50) {
+                    alert(`A habilidade Hálito De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo1 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 2) {
+                  if (PoderEspiritual >= 250) {
+                    alert(
+                      `A habilidade Criação de Lâmina de Fogo foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 3) {
+                  if (PoderEspiritual >= 2500) {
+                    alert(
+                      `A habilidade Manipulação de Fogo Negro foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 4) {
+                  if (PoderEspiritual >= 7500) {
+                    alert(`A habilidade Corte De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo4 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 5) {
+                  if (PoderEspiritual >= 45000) {
+                    alert(
+                      `A habilidade Criação de Vórtex de Fogo Negro foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 6) {
+                  if (PoderEspiritual >= 150000) {
+                    alert(
+                      `A habilidade Manipulação Completa Sobre a Água foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo6 = `Desbloqueado`;
+                    NomeDesconhecidoFogo = `Amaterasu`;
+                  }
+                } else if (ClasseOfensivaFogo === 7) {
+                  let RepetidorTreinamentoPoderFogo = true;
+                  do {
+                    PoderEscolhido = prompt(`Escolha seu local de treinamento
+                  1- Sauna (Nivel Requirido: 0)
+                  2- Fogueira (Nivel Requirido: 30)
+                  3- Banho De Fogo Puro (Nivel Requirido: 370)
+                  4- Lago De Fogo (Nivel Requirido: 3.890)
+                  5- Piscina De Lava (Nivel Requirido: 14.980)
+                  6- Vulcão (Nivel Requirido: 54.769)
+                  7- Voltar
+                  Poder Espiritual: ${PoderEspiritual}`);
+                    PoderEscolhido = parseInt(PoderEscolhido);
+                    if (
+                      isNaN(PoderEscolhido) ||
+                      PoderEscolhido >= 8 ||
+                      PoderEscolhido <= 0
+                    ) {
+                      alert(`Digite somente números de 1 a 7`);
+                    }
+                    if (PoderEscolhido === 1) {
+                      alert(`Você treinou seu poder de Fogo dentro de uma Sauna
+                    Você upou 3 níveis`);
+                      PoderEspiritual += 3;
+                    } else if (PoderEscolhido === 2) {
+                      if (PoderEspiritual >= 30) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Fogueira
+                    Você upou 62 níveis`);
+                        PoderEspiritual += 62;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 3) {
+                      if (PoderEspiritual >= 370) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Banho De Fogo Puro
+                    Você upou 367 níveis`);
+                        PoderEspiritual += 367;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 4) {
+                      if (PoderEspiritual >= 3890) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Lago De Fogo
+                    Você upou 1.479 níveis`);
+                        PoderEspiritual += 1479;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 5) {
+                      if (PoderEspiritual >= 14980) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Piscina De Lava
+                    Você upou 7.937 níveis`);
+                        PoderEspiritual += 7937;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 6) {
+                      if (PoderEspiritual >= 54769) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Vulcão
+                    Você upou 31.897 níveis`);
+                        PoderEspiritual += 31897;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 7) {
+                      RepetidorTreinamentoPoderFogo = false;
+                      alert(`Voltando...`);
+                    }
+                  } while (RepetidorTreinamentoPoderFogo === true);
+                }
+              } while (PoderRepetidorFogo === true);
+              break;
+            case 2:
+              let ClasseDefensivaFogo = `.`;
+              let NomeDesconhecidoDefensivaFogo = `???`;
+              let PoderRepetidorDefensivaFogo = true;
+
+              do {
+                ClasseDefensivaFogo = prompt(`Desbloqueie ataques de Fogo
+                1- Hálito De Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
+                2- Defesa de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
+                3- Manipulação do Fogo (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
+                4- Exoesqueleto de Fogo (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
+                5- Geração de Escudo de Fogo (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
+                6- ${NomeDesconhecidoDefensivaFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
+                7- Treinamento
+                Poder Espiritual: ${PoderEspiritual}`);
+                ClasseDefensivaFogo = parseInt(ClasseDefensivaFogo);
+                if (
+                  isNaN(ClasseDefensivaFogo) ||
+                  ClasseDefensivaFogo >= 8 ||
+                  ClasseDefensivaFogo <= 0
+                ) {
+                  alert(`Digite somente números de 1 a 7`);
+                } else if (ClasseDefensivaFogo === 1) {
+                  if (PoderEspiritual >= 50) {
+                    alert(`A habilidade Hálito De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo1 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 2) {
+                  if (PoderEspiritual >= 250) {
+                    alert(`A habilidade Defesa De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 3) {
+                  if (PoderEspiritual >= 2500) {
+                    alert(`A habilidade Manipulação Do Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 4) {
+                  if (PoderEspiritual >= 7500) {
+                    alert(`A habilidade Exoesqueleto De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo4 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 5) {
+                  if (PoderEspiritual >= 45000) {
+                    alert(
+                      `A habilidade Geração De Escudo De Fogo foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 6) {
+                  if (PoderEspiritual >= 150000) {
+                    alert(
+                      `A habilidade Criação Divina da Parede Pirocinética foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo6 = `Desbloqueado`;
+                    NomeDesconhecidoDefensivaFogo = `Criação Divina da Parede Pirocinética`;
+                  }
+                } else if (ClasseDefensivaFogo === 7) {
+                  let RepetidorTreinamentoPoderDefensivaFogo = true;
+                  do {
+                    PoderEscolhido = prompt(`Escolha seu local de treinamento
+                    1- Sauna (Nivel Requirido: 0)
+                    2- Fogueira (Nivel Requirido: 30)
+                    3- Banho De Fogo Puro (Nivel Requirido: 370)
+                    4- Lago De Fogo (Nivel Requirido: 3.890)
+                    5- Piscina De Lava (Nivel Requirido: 14.980)
+                    6- Vulcão (Nivel Requirido: 54.769)
+                    7- Voltar
+                  Poder Espiritual: ${PoderEspiritual}`);
+                    PoderEscolhido = parseInt(PoderEscolhido);
+                    if (
+                      isNaN(PoderEscolhido) ||
+                      PoderEscolhido >= 8 ||
+                      PoderEscolhido <= 0
+                    ) {
+                      alert(`Digite somente números de 1 a 7`);
+                    }
+                    if (PoderEscolhido === 1) {
+                      alert(`Você treinou seu poder de Fogo dentro de uma Sauna
+                    Você upou 3 níveis`);
+                      PoderEspiritual += 3;
+                    } else if (PoderEscolhido === 2) {
+                      if (PoderEspiritual >= 30) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Fogueira
+                    Você upou 62 níveis`);
+                        PoderEspiritual += 62;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 3) {
+                      if (PoderEspiritual >= 370) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Banho De Fogo Puro
+                    Você upou 367 níveis`);
+                        PoderEspiritual += 367;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 4) {
+                      if (PoderEspiritual >= 3890) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Lago De Fogo
+                    Você upou 1.479 níveis`);
+                        PoderEspiritual += 1479;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 5) {
+                      if (PoderEspiritual >= 14980) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Piscina De Lava
+                    Você upou 7.937 níveis`);
+                        PoderEspiritual += 7937;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 6) {
+                      if (PoderEspiritual >= 54769) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Vulcão
+                    Você upou 31.897 níveis`);
+                        PoderEspiritual += 31897;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 7) {
+                      RepetidorTreinamentoPoderDefensivaFogo = false;
+                      alert(`Voltando...`);
+                    }
+                  } while (RepetidorTreinamentoPoderDefensivaFogo === true);
+                }
+              } while (PoderRepetidorDefensivaFogo === true);
+              break;
+            case 3:
+              let ClasseEquilibradaFogo = `.`;
+              let NomeDesconhecidoEquilibradaFogo = `???`;
+              let PoderRepetidorEquilibradaFogo = true;
+
+              do {
+                ClasseEquilibradaFogo = prompt(`Desbloqueie ataques de Fogo
+                1- Hálito De Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
+                2- Defesa de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
+                3- Manipulação De Fogo Negro (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
+                4- Exoesqueleto De Fogo (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
+                5- Solidificação De Fogo (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
+                6- ${NomeDesconhecidoEquilibradaFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
+                7- Treinamento
+                Poder Espiritual: ${PoderEspiritual}`);
+                ClasseEquilibradaFogo = parseInt(ClasseEquilibradaFogo);
+                if (
+                  isNaN(ClasseEquilibradaFogo) ||
+                  ClasseEquilibradaFogo >= 8 ||
+                  ClasseEquilibradaFogo <= 0
+                ) {
+                  alert(`Digite somente números de 1 a 7`);
+                } else if (ClasseEquilibradaFogo === 1) {
+                  if (PoderEspiritual >= 50) {
+                    alert(`A habilidade Hálito De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo1 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 2) {
+                  if (PoderEspiritual >= 250) {
+                    alert(`A habilidade Defesa De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 3) {
+                  if (PoderEspiritual >= 2500) {
+                    alert(
+                      `A habilidade Manipulação De Fogo Negro foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 4) {
+                  if (PoderEspiritual >= 7500) {
+                    alert(`A habilidade Exoesqueleto De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo4 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 5) {
+                  if (PoderEspiritual >= 45000) {
+                    alert(
+                      `A habilidade Solidificação De Fogo foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 6) {
+                  if (PoderEspiritual >= 150000) {
+                    alert(
+                      `A habilidade Manipulação Completa Sobre o Fogo foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo6 = `Desbloqueado`;
+                    NomeDesconhecidoEquilibradaFogo = `Manipulação Completa Sobre o Fogo`;
+                  }
+                } else if (ClasseEquilibradaFogo === 7) {
+                  let RepetidorTreinamentoPoderEquilibradaFogo = true;
+                  do {
+                    PoderEscolhido = prompt(`Escolha seu local de treinamento
+                    1- Sauna (Nivel Requirido: 0)
+                    2- Fogueira (Nivel Requirido: 30)
+                    3- Banho De Fogo Puro (Nivel Requirido: 370)
+                    4- Lago De Fogo (Nivel Requirido: 3.890)
+                    5- Piscina De Lava (Nivel Requirido: 14.980)
+                    6- Vulcão (Nivel Requirido: 54.769)
+                    7- Voltar
+                    Poder Espiritual: ${PoderEspiritual}`);
+                    PoderEscolhido = parseInt(PoderEscolhido);
+                    if (
+                      isNaN(PoderEscolhido) ||
+                      PoderEscolhido >= 8 ||
+                      PoderEscolhido <= 0
+                    ) {
+                      alert(`Digite somente números de 1 a 7`);
+                    }
+                    if (PoderEscolhido === 1) {
+                      alert(`Você treinou seu poder de Fogo dentro de uma Sauna
+                      Você upou 3 níveis`);
+                      PoderEspiritual += 3;
+                    } else if (PoderEscolhido === 2) {
+                      if (PoderEspiritual >= 30) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Fogueira
+                      Você upou 62 níveis`);
+                        PoderEspiritual += 62;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 3) {
+                      if (PoderEspiritual >= 370) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Banho De Fogo Puro
+                      Você upou 367 níveis`);
+                        PoderEspiritual += 367;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 4) {
+                      if (PoderEspiritual >= 3890) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Lago De Fogo
+                      Você upou 1.479 níveis`);
+                        PoderEspiritual += 1479;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 5) {
+                      if (PoderEspiritual >= 14980) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Piscina De Lava
+                      Você upou 7.937 níveis`);
+                        PoderEspiritual += 7937;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 6) {
+                      if (PoderEspiritual >= 54769) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Vulcão
+                      Você upou 31.897 níveis`);
+                        PoderEspiritual += 31897;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 7) {
+                      RepetidorTreinamentoPoderEquilibradaFogo = false;
+                      alert(`Voltando...`);
+                    }
+                  } while (RepetidorTreinamentoPoderEquilibradaFogo === true);
+                }
+              } while (PoderRepetidorEquilibradaFogo === true);
+              break;
+            case 4:
+              ClassesFogo = ``;
+              let ClassesRepetidorFogo = true;
+              let InformacoesClassesFogo = ``;
+              let HabilidadeDesconhecidaFogo;
+              do {
+                let Classes = prompt(`Qual classe gostaria de saber sobre?
+                1- Ofensiva
+                2- Defensiva
+                3- Equilíbrio
+                4- Voltar`);
+
+                if (isNaN(ClassesFogo) || ClassesFogo >= 5 || ClassesFogo <= 0) {
+                  alert(`Digite somente números entre 1 a 4`);
+                } else if (ClassesFogo === 1) {
+                  let RepetidorFogo = true;
+                  do {
+                    InformacoesClassesFogo = prompt(`
+                    1- Hálito de Fogo (Nível Requirido: 50 )
+                    2- Criação de Lâmina de Fogo (Nível Requirido: 250 )
+                    3- Manipulação de Fogo Negro (Nível Requirido: 2.500)
+                    4- Corte de Fogo (Nível Requirido: 7.500 )
+                    5- Criação de Vórtex de Fogo Negro (Nível Requirido: 45.000 )
+                    6- ${NomeDesconhecidoFogo} (Nível Requirido: 150.000 )
+                    `);
+                    InformacoesClassesFogo = parseInt(InformacoesClassesFogo);
+                    if (
+                      isNaN(InformacoesClassesFogo) ||
+                      InformacoesClassesFogo >= 7 ||
+                      InformacoesClassesFogo <= 0
+                    ) {
+                      alert(`Digite somente números entre 1 a 6`);
+                    } else if (InformacoesClassesFogo === 1) {
+                      alert(
+                        `Hálito de Fogo é o poder de gerar e disparar fogo através da boca. É uma técnica da Manipulação do Fogo, bem como uma variação do Hálito Elemental e do Hálito de Calor. Oposto ao Hálito de Água e ao Hálito de Gelo.`
+                      );
+                    } else if (InformacoesClassesFogo === 2) {
+                      alert(
+                        `O usuário pode construir lâminas de várias formas e tamanhos de fogo. Algumas lâminas são uma mera faísca instantânea de atrito, enquanto outras podem durar para sempre, dependendo da habilidade do usuário. As chamas podem aumentar a borda de corte usando alta temperatura para derreter e incinerar o alvo.`
+                      );
+                    } else if (InformacoesClassesFogo === 3) {
+                      alert(
+                        `O usuário é capaz de gerar, manipular e moldar um tipo de fogo que possui uma natureza sombria, como se fosse uma espécie de "lado negativo" do fogo. Esse tipo de chama, além de possuir quase as mesmas capacidades do fogo comum, possui algumas particularidades: Além de possuírem mais poder destrutivo do que o fogo comum, as chamas negras não podem ser apagadas por meios comuns, como o uso de água ou gelo. Elas também possuem uma propriedade anti-regenerativa que impede que alvos afetados pelas mesmas se recuperem de danos, o que, em alguns casos, pode afetar até mesmo seres com regeneração alta e imortais. Em essência, trata-se apenas de controlar os poderes negativos do fogo.`
+                      );
+                    } else if (InformacoesClassesFogo === 4) {
+                      alert(
+                        `O usuário pode liberar e utilizar fogo para realizar ataques, como lançar rajadas de fogo ou gerar explosões de chamas intensas que consumam tudo ao seu redor.`
+                      );
+                    } else if (InformacoesClassesFogo === 5) {
+                      alert(
+                        `O usuário pode gerar espirais/vórtices compostos por fogo. O vórtice pode ser projetado como um ataque de longo alcance ou como um tornado de chamas para fins ofensivos e/ou defensivos.`
+                      );
+                    } else if (InformacoesClassesFogo === 6) {
+                      alert(
+                        `Essa habilidade é secreta, treine para ela ser descoberta`
+                      );
+                    }
+                  } while (RepetidorFogo === true);
+                } else if (ClassesFogo === 2) {
+                  let RepetidorFogo = true;
+                  do {
+                    InformacoesClassesFogo = prompt(`
+                    1- Hálito De Fogo (Nível Requirido: 50)
+                2- Defesa de Fogo (Nível Requirido: 250)
+                3- Manipulação do Fogo (Nível Requirido: 2.500)
+                4- Exoesqueleto de Fogo (Nível Requirido: 7.500)
+                5- Geração de Escudo de Fogo (Nível Requirido: 45.000)
+                6- ${NomeDesconhecidoDefensivaFogo} (Nível Requirido: 150.000)
+                `);
+                    InformacoesClassesFogo = parseInt(InformacoesClassesFogo);
+                    if (
+                      isNaN(InformacoesClassesFogo) ||
+                      InformacoesClassesFogo >= 7 ||
+                      InformacoesClassesFogo <= 0
+                    ) {
+                      alert(`Digite somente números entre 1 a 6`);
+                    } else if (InformacoesClassesFogo === 1) {
+                      alert(
+                        `Hálito de Fogo é o poder de gerar e disparar fogo através da boca. É uma técnica da Manipulação do Fogo, bem como uma variação do Hálito Elemental e do Hálito de Calor. Oposto ao Hálito de Água e ao Hálito de Gelo.`
+                      );
+                    } else if (InformacoesClassesFogo === 2) {
+                      alert(
+                        `O usuário pode utilizar fogo de várias formas diferentes para defender a si mesmo, ou a outros seres/objetos.`
+                      );
+                    } else if (InformacoesClassesFogo === 3) {
+                      alert(
+                        `O usuário é capaz de moldar a fogo e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
+                      );
+                    } else if (InformacoesClassesFogo === 4) {
+                      alert(
+                        `O usuário possui a capacidade de formar uma espécie de armadura feita de fogo à volta do próprio corpo para proteção ou para melhorar a condição física. Com treino, o usuário pode manipular a armadura para formar construtos ou usá-la para teletransporte.`
+                      );
+                    } else if (InformacoesClassesFogo === 5) {
+                      alert(`O usuário pode se defender a si mesmo ou a outros utilizando fogo. É um sub-poder da Manipulação do Fogo, bem como uma variação da Defesa Elemental. É oposto aos Ataques de Fogo. Não deve ser confundido com Escudo de Chamas.`);
+                    } else if (InformacoesClassesFogo === 6) {
+                      alert(
+                        `Essa habilidade é secreta, treine para ela ser descoberta`
+                      );
+                    }
+                  } while (RepetidorFogo === true);
+                } else if (ClassesFogo === 3) {
+                  let RepetidorFogo = true;
+                  do {
+                    InformacoesClassesFogo = prompt(`
+                    1- Hálito De Fogo (Nível Requirido: 50)
+                2- Defesa de Fogo (Nível Requirido: 250)
+                3- Manipulação De Fogo Negro (Nível Requirido: 2.500)
+                4- Exoesqueleto De Fogo (Nível Requirido: 7.500)
+                5- Solidificação De Fogo (Nível Requirido: 45.000)
+                6- ${NomeDesconhecidoEquilibradaFogo} (Nível Requirido: 150.000)
+                `);
+                    InformacoesClassesFogo = parseInt(InformacoesClassesFogo);
+                    if (
+                      isNaN(InformacoesClassesFogo) ||
+                      InformacoesClassesFogo >= 7 ||
+                      InformacoesClassesFogo <= 0
+                    ) {
+                      alert(`Digite somente números entre 1 a 6`);
+                    } else if (InformacoesClassesFogo === 1) {
+                      alert(
+                        `Hálito de Fogo é o poder de gerar e disparar fogo através da boca. É uma técnica da Manipulação do Fogo, bem como uma variação do Hálito Elemental e do Hálito de Calor. Oposto ao Hálito de Água e ao Hálito de Gelo.`
+                      );
+                    } else if (InformacoesClassesFogo === 2) {
+                      alert(
+                        `O usuário pode utilizar fogo de várias formas diferentes para defender a si mesmo, ou a outros seres/objetos.`
+                      );
+                    } else if (InformacoesClassesFogo === 3) {
+                      alert(
+                        `O usuário é capaz de moldar a fogo e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
+                      );
+                    } else if (InformacoesClassesFogo === 4) {
+                      alert(
+                        `O usuário possui a capacidade de formar uma espécie de armadura feita de fogo à volta do próprio corpo para proteção ou para melhorar a condição física. Com treino, o usuário pode manipular a armadura para formar construtos ou usá-la para teletransporte.`
+                      );
+                    } else if (InformacoesClassesFogo === 5) {
+                      alert(
+                        `O usuário é capaz de solidificar o fogo como uma rocha extremamente resistente`
+                      );
+                    } else if (InformacoesClassesFogo === 6) {
+                      alert(
+                        `Essa habilidade é secreta, treine para ela ser descoberta`
+                      );
+                    }
+                  } while (RepetidorFogo === true);
+                } else if (ClassesFogo === 4) {
+                  alert(`Voltando...`);
+                  ClassesRepetidorFogo = false;
+                }
+              } while (ClassesRepetidorFogo === true);
+          }
+        } while (ClasseRepetidoraFogo === true);
       } else if (Elemento === `Terra`) {
+        let ClasseEscolhidaFogo = ``;
+        let ClasseRepetidoraFogo = true;
+        let BloqueadoresFogo = {
+          BloqueadorEspiritualFogo1: `Bloqueado`,
+          BloqueadorEspiritualFogo2: `Bloqueado`,
+          BloqueadorEspiritualFogo3: `Bloqueado`,
+          BloqueadorEspiritualFogo4: `Bloqueado`,
+          BloqueadorEspiritualFogo5: `Bloqueado`,
+          BloqueadorEspiritualFogo6: `Bloqueado`
+        };
+
+        do {
+          ClasseEscolhidaFogo = prompt(`Escolha sua classe
+          1- Ofensiva
+          2- Defensiva
+          3- Equilíbrio
+          4- Ver Sobre As Classes`);
+
+          ClasseEscolhidaFogo = parseInt(ClasseEscolhidaFogo);
+
+          if (
+            isNaN(ClasseEscolhidaFogo) ||
+            ClasseEscolhidaFogo >= 5 ||
+            ClasseEscolhidaFogo <= 0
+          ) {
+            alert(`Digite somente números de 1 a 4`);
+          }
+
+          switch (ClasseEscolhidaFogo) {
+            case 1:
+              let ClasseOfensivaFogo = `.`;
+              let NomeDesconhecidoFogo = `???`;
+              let PoderRepetidorFogo = true;
+
+              do {
+                ClasseOfensivaFogo = prompt(`Desbloqueie ataques de Fogo
+                1- Hálito de Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
+                2- Criação de Lâmina de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
+                3- Manipulação de Fogo Negro (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
+                4- Corte de Fogo (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
+                5- Criação de Vórtex de Fogo Negro (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
+                6- ${NomeDesconhecidoFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
+                7- Treinamento
+                Poder Espiritual: ${PoderEspiritual}`);
+                ClasseOfensivaFogo = parseInt(ClasseOfensivaFogo);
+                if (
+                  isNaN(ClasseOfensivaFogo) ||
+                  ClasseOfensivaFogo >= 8 ||
+                  ClasseOfensivaFogo <= 0
+                ) {
+                  alert(`Digite somente números de 1 a 7`);
+                } else if (ClasseOfensivaFogo === 1) {
+                  if (PoderEspiritual >= 50) {
+                    alert(`A habilidade Hálito De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo1 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 2) {
+                  if (PoderEspiritual >= 250) {
+                    alert(
+                      `A habilidade Criação de Lâmina de Fogo foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 3) {
+                  if (PoderEspiritual >= 2500) {
+                    alert(
+                      `A habilidade Manipulação de Fogo Negro foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 4) {
+                  if (PoderEspiritual >= 7500) {
+                    alert(`A habilidade Corte De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo4 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 5) {
+                  if (PoderEspiritual >= 45000) {
+                    alert(
+                      `A habilidade Criação de Vórtex de Fogo Negro foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
+                  }
+                } else if (ClasseOfensivaFogo === 6) {
+                  if (PoderEspiritual >= 150000) {
+                    alert(
+                      `A habilidade Manipulação Completa Sobre a Água foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo6 = `Desbloqueado`;
+                    NomeDesconhecidoFogo = `Amaterasu`;
+                  }
+                } else if (ClasseOfensivaFogo === 7) {
+                  let RepetidorTreinamentoPoderFogo = true;
+                  do {
+                    PoderEscolhido = prompt(`Escolha seu local de treinamento
+                  1- Sauna (Nivel Requirido: 0)
+                  2- Fogueira (Nivel Requirido: 30)
+                  3- Banho De Fogo Puro (Nivel Requirido: 370)
+                  4- Lago De Fogo (Nivel Requirido: 3.890)
+                  5- Piscina De Lava (Nivel Requirido: 14.980)
+                  6- Vulcão (Nivel Requirido: 54.769)
+                  7- Voltar
+                  Poder Espiritual: ${PoderEspiritual}`);
+                    PoderEscolhido = parseInt(PoderEscolhido);
+                    if (
+                      isNaN(PoderEscolhido) ||
+                      PoderEscolhido >= 8 ||
+                      PoderEscolhido <= 0
+                    ) {
+                      alert(`Digite somente números de 1 a 7`);
+                    }
+                    if (PoderEscolhido === 1) {
+                      alert(`Você treinou seu poder de Fogo dentro de uma Sauna
+                    Você upou 3 níveis`);
+                      PoderEspiritual += 3;
+                    } else if (PoderEscolhido === 2) {
+                      if (PoderEspiritual >= 30) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Fogueira
+                    Você upou 62 níveis`);
+                        PoderEspiritual += 62;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 3) {
+                      if (PoderEspiritual >= 370) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Banho De Fogo Puro
+                    Você upou 367 níveis`);
+                        PoderEspiritual += 367;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 4) {
+                      if (PoderEspiritual >= 3890) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Lago De Fogo
+                    Você upou 1.479 níveis`);
+                        PoderEspiritual += 1479;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 5) {
+                      if (PoderEspiritual >= 14980) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Piscina De Lava
+                    Você upou 7.937 níveis`);
+                        PoderEspiritual += 7937;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 6) {
+                      if (PoderEspiritual >= 54769) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Vulcão
+                    Você upou 31.897 níveis`);
+                        PoderEspiritual += 31897;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 7) {
+                      RepetidorTreinamentoPoderFogo = false;
+                      alert(`Voltando...`);
+                    }
+                  } while (RepetidorTreinamentoPoderFogo === true);
+                }
+              } while (PoderRepetidorFogo === true);
+              break;
+            case 2:
+              let ClasseDefensivaFogo = `.`;
+              let NomeDesconhecidoDefensivaFogo = `???`;
+              let PoderRepetidorDefensivaFogo = true;
+
+              do {
+                ClasseDefensivaFogo = prompt(`Desbloqueie ataques de Fogo
+                1- Hálito De Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
+                2- Defesa de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
+                3- Manipulação do Fogo (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
+                4- Exoesqueleto de Fogo (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
+                5- Geração de Escudo de Fogo (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
+                6- ${NomeDesconhecidoDefensivaFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
+                7- Treinamento
+                Poder Espiritual: ${PoderEspiritual}`);
+                ClasseDefensivaFogo = parseInt(ClasseDefensivaFogo);
+                if (
+                  isNaN(ClasseDefensivaFogo) ||
+                  ClasseDefensivaFogo >= 8 ||
+                  ClasseDefensivaFogo <= 0
+                ) {
+                  alert(`Digite somente números de 1 a 7`);
+                } else if (ClasseDefensivaFogo === 1) {
+                  if (PoderEspiritual >= 50) {
+                    alert(`A habilidade Hálito De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo1 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 2) {
+                  if (PoderEspiritual >= 250) {
+                    alert(`A habilidade Defesa De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 3) {
+                  if (PoderEspiritual >= 2500) {
+                    alert(`A habilidade Manipulação Do Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 4) {
+                  if (PoderEspiritual >= 7500) {
+                    alert(`A habilidade Exoesqueleto De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo4 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 5) {
+                  if (PoderEspiritual >= 45000) {
+                    alert(
+                      `A habilidade Geração De Escudo De Fogo foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
+                  }
+                } else if (ClasseDefensivaFogo === 6) {
+                  if (PoderEspiritual >= 150000) {
+                    alert(
+                      `A habilidade Criação Divina da Parede Pirocinética foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo6 = `Desbloqueado`;
+                    NomeDesconhecidoDefensivaFogo = `Criação Divina da Parede Pirocinética`;
+                  }
+                } else if (ClasseDefensivaFogo === 7) {
+                  let RepetidorTreinamentoPoderDefensivaFogo = true;
+                  do {
+                    PoderEscolhido = prompt(`Escolha seu local de treinamento
+                    1- Sauna (Nivel Requirido: 0)
+                    2- Fogueira (Nivel Requirido: 30)
+                    3- Banho De Fogo Puro (Nivel Requirido: 370)
+                    4- Lago De Fogo (Nivel Requirido: 3.890)
+                    5- Piscina De Lava (Nivel Requirido: 14.980)
+                    6- Vulcão (Nivel Requirido: 54.769)
+                    7- Voltar
+                  Poder Espiritual: ${PoderEspiritual}`);
+                    PoderEscolhido = parseInt(PoderEscolhido);
+                    if (
+                      isNaN(PoderEscolhido) ||
+                      PoderEscolhido >= 8 ||
+                      PoderEscolhido <= 0
+                    ) {
+                      alert(`Digite somente números de 1 a 7`);
+                    }
+                    if (PoderEscolhido === 1) {
+                      alert(`Você treinou seu poder de Fogo dentro de uma Sauna
+                    Você upou 3 níveis`);
+                      PoderEspiritual += 3;
+                    } else if (PoderEscolhido === 2) {
+                      if (PoderEspiritual >= 30) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Fogueira
+                    Você upou 62 níveis`);
+                        PoderEspiritual += 62;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 3) {
+                      if (PoderEspiritual >= 370) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Banho De Fogo Puro
+                    Você upou 367 níveis`);
+                        PoderEspiritual += 367;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 4) {
+                      if (PoderEspiritual >= 3890) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Lago De Fogo
+                    Você upou 1.479 níveis`);
+                        PoderEspiritual += 1479;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 5) {
+                      if (PoderEspiritual >= 14980) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Piscina De Lava
+                    Você upou 7.937 níveis`);
+                        PoderEspiritual += 7937;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 6) {
+                      if (PoderEspiritual >= 54769) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Vulcão
+                    Você upou 31.897 níveis`);
+                        PoderEspiritual += 31897;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 7) {
+                      RepetidorTreinamentoPoderDefensivaFogo = false;
+                      alert(`Voltando...`);
+                    }
+                  } while (RepetidorTreinamentoPoderDefensivaFogo === true);
+                }
+              } while (PoderRepetidorDefensivaFogo === true);
+              break;
+            case 3:
+              let ClasseEquilibradaFogo = `.`;
+              let NomeDesconhecidoEquilibradaFogo = `???`;
+              let PoderRepetidorEquilibradaFogo = true;
+
+              do {
+                ClasseEquilibradaFogo = prompt(`Desbloqueie ataques de Fogo
+                1- Hálito De Fogo (Nível Requirido: 50 (${BloqueadoresFogo.BloqueadorEspiritualFogo1}))
+                2- Defesa de Fogo (Nível Requirido: 250 (${BloqueadoresFogo.BloqueadorEspiritualFogo2}))
+                3- Manipulação De Fogo Negro (Nível Requirido: 2.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo3}))
+                4- Exoesqueleto De Fogo (Nível Requirido: 7.500 (${BloqueadoresFogo.BloqueadorEspiritualFogo4}))
+                5- Solidificação De Fogo (Nível Requirido: 45.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo5}))
+                6- ${NomeDesconhecidoEquilibradaFogo} (Nível Requirido: 150.000 (${BloqueadoresFogo.BloqueadorEspiritualFogo6}))
+                7- Treinamento
+                Poder Espiritual: ${PoderEspiritual}`);
+                ClasseEquilibradaFogo = parseInt(ClasseEquilibradaFogo);
+                if (
+                  isNaN(ClasseEquilibradaFogo) ||
+                  ClasseEquilibradaFogo >= 8 ||
+                  ClasseEquilibradaFogo <= 0
+                ) {
+                  alert(`Digite somente números de 1 a 7`);
+                } else if (ClasseEquilibradaFogo === 1) {
+                  if (PoderEspiritual >= 50) {
+                    alert(`A habilidade Hálito De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo1 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 2) {
+                  if (PoderEspiritual >= 250) {
+                    alert(`A habilidade Defesa De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo2 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 3) {
+                  if (PoderEspiritual >= 2500) {
+                    alert(
+                      `A habilidade Manipulação De Fogo Negro foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo3 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 4) {
+                  if (PoderEspiritual >= 7500) {
+                    alert(`A habilidade Exoesqueleto De Fogo foi desbloqueada`);
+                    BloqueadoresFogo.BloqueadorEspiritualFogo4 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 5) {
+                  if (PoderEspiritual >= 45000) {
+                    alert(
+                      `A habilidade Solidificação De Fogo foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo5 = `Desbloqueado`;
+                  }
+                } else if (ClasseEquilibradaFogo === 6) {
+                  if (PoderEspiritual >= 150000) {
+                    alert(
+                      `A habilidade Manipulação Completa Sobre o Fogo foi desbloqueada`
+                    );
+                    BloqueadoresFogo.BloqueadorEspiritualFogo6 = `Desbloqueado`;
+                    NomeDesconhecidoEquilibradaFogo = `Manipulação Completa Sobre o Fogo`;
+                  }
+                } else if (ClasseEquilibradaFogo === 7) {
+                  let RepetidorTreinamentoPoderEquilibradaFogo = true;
+                  do {
+                    PoderEscolhido = prompt(`Escolha seu local de treinamento
+                    1- Sauna (Nivel Requirido: 0)
+                    2- Fogueira (Nivel Requirido: 30)
+                    3- Banho De Fogo Puro (Nivel Requirido: 370)
+                    4- Lago De Fogo (Nivel Requirido: 3.890)
+                    5- Piscina De Lava (Nivel Requirido: 14.980)
+                    6- Vulcão (Nivel Requirido: 54.769)
+                    7- Voltar
+                    Poder Espiritual: ${PoderEspiritual}`);
+                    PoderEscolhido = parseInt(PoderEscolhido);
+                    if (
+                      isNaN(PoderEscolhido) ||
+                      PoderEscolhido >= 8 ||
+                      PoderEscolhido <= 0
+                    ) {
+                      alert(`Digite somente números de 1 a 7`);
+                    }
+                    if (PoderEscolhido === 1) {
+                      alert(`Você treinou seu poder de Fogo dentro de uma Sauna
+                      Você upou 3 níveis`);
+                      PoderEspiritual += 3;
+                    } else if (PoderEscolhido === 2) {
+                      if (PoderEspiritual >= 30) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Fogueira
+                      Você upou 62 níveis`);
+                        PoderEspiritual += 62;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 3) {
+                      if (PoderEspiritual >= 370) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Banho De Fogo Puro
+                      Você upou 367 níveis`);
+                        PoderEspiritual += 367;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 4) {
+                      if (PoderEspiritual >= 3890) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Lago De Fogo
+                      Você upou 1.479 níveis`);
+                        PoderEspiritual += 1479;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 5) {
+                      if (PoderEspiritual >= 14980) {
+                        alert(`Você treinou seu poder de Fogo dentro de uma Piscina De Lava
+                      Você upou 7.937 níveis`);
+                        PoderEspiritual += 7937;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 6) {
+                      if (PoderEspiritual >= 54769) {
+                        alert(`Você treinou seu poder de Fogo dentro de um Vulcão
+                      Você upou 31.897 níveis`);
+                        PoderEspiritual += 31897;
+                      } else {
+                        alert(`Nível insuficiente`);
+                      }
+                    } else if (PoderEscolhido === 7) {
+                      RepetidorTreinamentoPoderEquilibradaFogo = false;
+                      alert(`Voltando...`);
+                    }
+                  } while (RepetidorTreinamentoPoderEquilibradaFogo === true);
+                }
+              } while (PoderRepetidorEquilibradaFogo === true);
+              break;
+            case 4:
+              ClassesFogo = ``;
+              let ClassesRepetidorFogo = true;
+              let InformacoesClassesFogo = ``;
+              let HabilidadeDesconhecidaFogo;
+              do {
+                let Classes = prompt(`Qual classe gostaria de saber sobre?
+                1- Ofensiva
+                2- Defensiva
+                3- Equilíbrio
+                4- Voltar`);
+
+                if (isNaN(ClassesFogo) || ClassesFogo >= 5 || ClassesFogo <= 0) {
+                  alert(`Digite somente números entre 1 a 4`);
+                } else if (ClassesFogo === 1) {
+                  let RepetidorFogo = true;
+                  do {
+                    InformacoesClassesFogo = prompt(`
+                    1- Hálito de Fogo (Nível Requirido: 50 )
+                    2- Criação de Lâmina de Fogo (Nível Requirido: 250 )
+                    3- Manipulação de Fogo Negro (Nível Requirido: 2.500)
+                    4- Corte de Fogo (Nível Requirido: 7.500 )
+                    5- Criação de Vórtex de Fogo Negro (Nível Requirido: 45.000 )
+                    6- ${NomeDesconhecidoFogo} (Nível Requirido: 150.000 )
+                    `);
+                    InformacoesClassesFogo = parseInt(InformacoesClassesFogo);
+                    if (
+                      isNaN(InformacoesClassesFogo) ||
+                      InformacoesClassesFogo >= 7 ||
+                      InformacoesClassesFogo <= 0
+                    ) {
+                      alert(`Digite somente números entre 1 a 6`);
+                    } else if (InformacoesClassesFogo === 1) {
+                      alert(
+                        `Hálito de Fogo é o poder de gerar e disparar fogo através da boca. É uma técnica da Manipulação do Fogo, bem como uma variação do Hálito Elemental e do Hálito de Calor. Oposto ao Hálito de Água e ao Hálito de Gelo.`
+                      );
+                    } else if (InformacoesClassesFogo === 2) {
+                      alert(
+                        `O usuário pode construir lâminas de várias formas e tamanhos de fogo. Algumas lâminas são uma mera faísca instantânea de atrito, enquanto outras podem durar para sempre, dependendo da habilidade do usuário. As chamas podem aumentar a borda de corte usando alta temperatura para derreter e incinerar o alvo.`
+                      );
+                    } else if (InformacoesClassesFogo === 3) {
+                      alert(
+                        `O usuário é capaz de gerar, manipular e moldar um tipo de fogo que possui uma natureza sombria, como se fosse uma espécie de "lado negativo" do fogo. Esse tipo de chama, além de possuir quase as mesmas capacidades do fogo comum, possui algumas particularidades: Além de possuírem mais poder destrutivo do que o fogo comum, as chamas negras não podem ser apagadas por meios comuns, como o uso de água ou gelo. Elas também possuem uma propriedade anti-regenerativa que impede que alvos afetados pelas mesmas se recuperem de danos, o que, em alguns casos, pode afetar até mesmo seres com regeneração alta e imortais. Em essência, trata-se apenas de controlar os poderes negativos do fogo.`
+                      );
+                    } else if (InformacoesClassesFogo === 4) {
+                      alert(
+                        `O usuário pode liberar e utilizar fogo para realizar ataques, como lançar rajadas de fogo ou gerar explosões de chamas intensas que consumam tudo ao seu redor.`
+                      );
+                    } else if (InformacoesClassesFogo === 5) {
+                      alert(
+                        `O usuário pode gerar espirais/vórtices compostos por fogo. O vórtice pode ser projetado como um ataque de longo alcance ou como um tornado de chamas para fins ofensivos e/ou defensivos.`
+                      );
+                    } else if (InformacoesClassesFogo === 6) {
+                      alert(
+                        `Essa habilidade é secreta, treine para ela ser descoberta`
+                      );
+                    }
+                  } while (RepetidorFogo === true);
+                } else if (ClassesFogo === 2) {
+                  let RepetidorFogo = true;
+                  do {
+                    InformacoesClassesFogo = prompt(`
+                    1- Hálito De Fogo (Nível Requirido: 50)
+                2- Defesa de Fogo (Nível Requirido: 250)
+                3- Manipulação do Fogo (Nível Requirido: 2.500)
+                4- Exoesqueleto de Fogo (Nível Requirido: 7.500)
+                5- Geração de Escudo de Fogo (Nível Requirido: 45.000)
+                6- ${NomeDesconhecidoDefensivaFogo} (Nível Requirido: 150.000)
+                `);
+                    InformacoesClassesFogo = parseInt(InformacoesClassesFogo);
+                    if (
+                      isNaN(InformacoesClassesFogo) ||
+                      InformacoesClassesFogo >= 7 ||
+                      InformacoesClassesFogo <= 0
+                    ) {
+                      alert(`Digite somente números entre 1 a 6`);
+                    } else if (InformacoesClassesFogo === 1) {
+                      alert(
+                        `Hálito de Fogo é o poder de gerar e disparar fogo através da boca. É uma técnica da Manipulação do Fogo, bem como uma variação do Hálito Elemental e do Hálito de Calor. Oposto ao Hálito de Água e ao Hálito de Gelo.`
+                      );
+                    } else if (InformacoesClassesFogo === 2) {
+                      alert(
+                        `O usuário pode utilizar fogo de várias formas diferentes para defender a si mesmo, ou a outros seres/objetos.`
+                      );
+                    } else if (InformacoesClassesFogo === 3) {
+                      alert(
+                        `O usuário é capaz de moldar a fogo e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
+                      );
+                    } else if (InformacoesClassesFogo === 4) {
+                      alert(
+                        `O usuário possui a capacidade de formar uma espécie de armadura feita de fogo à volta do próprio corpo para proteção ou para melhorar a condição física. Com treino, o usuário pode manipular a armadura para formar construtos ou usá-la para teletransporte.`
+                      );
+                    } else if (InformacoesClassesFogo === 5) {
+                      alert(`O usuário pode se defender a si mesmo ou a outros utilizando fogo. É um sub-poder da Manipulação do Fogo, bem como uma variação da Defesa Elemental. É oposto aos Ataques de Fogo. Não deve ser confundido com Escudo de Chamas.`);
+                    } else if (InformacoesClassesFogo === 6) {
+                      alert(
+                        `Essa habilidade é secreta, treine para ela ser descoberta`
+                      );
+                    }
+                  } while (RepetidorFogo === true);
+                } else if (ClassesFogo === 3) {
+                  let RepetidorFogo = true;
+                  do {
+                    InformacoesClassesFogo = prompt(`
+                    1- Hálito De Fogo (Nível Requirido: 50)
+                2- Defesa de Fogo (Nível Requirido: 250)
+                3- Manipulação De Fogo Negro (Nível Requirido: 2.500)
+                4- Exoesqueleto De Fogo (Nível Requirido: 7.500)
+                5- Solidificação De Fogo (Nível Requirido: 45.000)
+                6- ${NomeDesconhecidoEquilibradaFogo} (Nível Requirido: 150.000)
+                `);
+                    InformacoesClassesFogo = parseInt(InformacoesClassesFogo);
+                    if (
+                      isNaN(InformacoesClassesFogo) ||
+                      InformacoesClassesFogo >= 7 ||
+                      InformacoesClassesFogo <= 0
+                    ) {
+                      alert(`Digite somente números entre 1 a 6`);
+                    } else if (InformacoesClassesFogo === 1) {
+                      alert(
+                        `Hálito de Fogo é o poder de gerar e disparar fogo através da boca. É uma técnica da Manipulação do Fogo, bem como uma variação do Hálito Elemental e do Hálito de Calor. Oposto ao Hálito de Água e ao Hálito de Gelo.`
+                      );
+                    } else if (InformacoesClassesFogo === 2) {
+                      alert(
+                        `O usuário pode utilizar fogo de várias formas diferentes para defender a si mesmo, ou a outros seres/objetos.`
+                      );
+                    } else if (InformacoesClassesFogo === 3) {
+                      alert(
+                        `O usuário é capaz de moldar a fogo e se rodear com ela para se defender e/ou proteger outros indivíduos, criando escudos e barreiras capazes de bloquear os ataques de oponentes, como projéteis, golpes físicos e quase qualquer coisa perigosa que possa os atingir, durante as batalhas.`
+                      );
+                    } else if (InformacoesClassesFogo === 4) {
+                      alert(
+                        `O usuário possui a capacidade de formar uma espécie de armadura feita de fogo à volta do próprio corpo para proteção ou para melhorar a condição física. Com treino, o usuário pode manipular a armadura para formar construtos ou usá-la para teletransporte.`
+                      );
+                    } else if (InformacoesClassesFogo === 5) {
+                      alert(
+                        `O usuário é capaz de solidificar o fogo como uma rocha extremamente resistente`
+                      );
+                    } else if (InformacoesClassesFogo === 6) {
+                      alert(
+                        `Essa habilidade é secreta, treine para ela ser descoberta`
+                      );
+                    }
+                  } while (RepetidorFogo === true);
+                } else if (ClassesFogo === 4) {
+                  alert(`Voltando...`);
+                  ClassesRepetidorFogo = false;
+                }
+              } while (ClassesRepetidorFogo === true);
+          }
+        } while (ClasseRepetidoraFogo === true);
       }
     }
   }
